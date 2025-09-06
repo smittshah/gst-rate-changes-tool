@@ -1,0 +1,2339 @@
+<!DOCTYPE html>
+<!-- saved from url=(0103)file://mac/Home/Downloads/gst.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Key Recommendations made in the 56th GST Council Meeting - Complete Dashboard</title>
+<link href="./gst Council 56th meeting presentation by Smit Shah_files/css2" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #f8f9fa;
+    min-height: 100vh;
+
+
+    color: #2d3748;
+}
+
+.header {
+    background: linear-gradient(135deg, #c554ba 0%, #6d8fc8 100%);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.header .subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    margin-bottom: 1rem;
+}
+
+.presenter-info {
+    background: rgba(255,255,255,0.1);
+    border-radius: 15px;
+    padding: 1rem;
+    margin-top: 1.5rem;
+    backdrop-filter: blur(10px);
+}
+
+.presenter-info h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.3rem;
+}
+
+.presenter-info .company {
+    font-size: 1rem;
+    opacity: 0.95;
+    margin-top: 0.3rem;
+}
+
+.presenter-info p {
+    font-size: 1rem;
+    opacity: 0.95;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.main-selector {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    justify-content: center;
+}
+
+.main-btn {
+    flex: 1;
+    max-width: 300px;
+    padding: 1.5rem;
+    background: white;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.main-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    border-color: #4a5568;
+}
+
+.main-btn.active {
+    background: linear-gradient(135deg, #2d3748 0%, #4a5568 100%);
+    color: white;
+    border-color: #2d3748;
+}
+
+.main-btn-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.main-btn-text {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.filter-section {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    display: none;
+}
+
+.filter-section.active {
+    display: block;
+}
+
+.filter-dropdown {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-dropdown:hover {
+    border-color: #4a5568;
+}
+
+.sector-card {
+    background: white;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    display: none;
+}
+
+.sector-card.active {
+    display: block;
+}
+
+.sector-card:hover {
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.sector-header {
+    background: linear-gradient(135deg, #4a5568 0%, #2d3748 100%);
+    color: white;
+    padding: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.sector-header:hover {
+    background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%);
+}
+
+.sector-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.sector-icon {
+    font-size: 1.6rem;
+}
+
+.expand-icon {
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+}
+
+.sector-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+    background: #f8f9fa;
+}
+
+.sector-content.expanded {
+    max-height: 3000px;
+}
+
+.summary-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    padding: 1.5rem;
+}
+
+.summary-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    border: 2px solid transparent;
+}
+
+.summary-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.summary-card.cheaper {
+    border-color: #48bb78;
+    background: linear-gradient(135deg, #f0fff4 0%, #c6f6d5 100%);
+}
+
+.summary-card.costlier {
+    border-color: #f56565;
+    background: linear-gradient(135deg, #fff5f5 0%, #fed7d7 100%);
+}
+
+.summary-card.unchanged {
+    border-color: #a0aec0;
+    background: linear-gradient(135deg, #f7fafc 0%, #e2e8f0 100%);
+}
+
+.card-title {
+    font-size: 0.9rem;
+    color: #718096;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.card-number {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #2d3748;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    z-index: 1000;
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border-radius: 12px;
+    padding: 0;
+    width: 90%;
+    max-width: 1200px;
+    height: 85vh;
+    overflow: hidden;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+}
+
+.modal-header {
+    background: linear-gradient(135deg, #2d3748 0%, #4a5568 100%);
+    color: white;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.8rem;
+    cursor: pointer;
+    padding: 0;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.close-btn:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+.modal-body {
+    padding: 1.5rem;
+    overflow-y: auto;
+    height: calc(85vh - 80px);
+}
+
+.rate-group {
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.rate-header {
+    padding: 1rem 1.5rem;
+    font-weight: 700;
+    color: white;
+    font-size: 1.1rem;
+}
+
+.rate-down-header {
+    background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
+}
+
+.rate-up-header {
+    background: linear-gradient(135deg, #f56565 0%, #e53e3e 100%);
+}
+
+.rate-flat-header {
+    background: linear-gradient(135deg, #4299e1 0%, #3182ce 100%);
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: white;
+    font-size: 0.95rem;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    vertical-align: top;
+}
+
+th {
+    background: #2d3748;
+    color: white;
+    font-weight: 600;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+tr:nth-child(even) td {
+    background: #f8f9fa;
+}
+
+tr:hover td {
+    background: #e2e8f0;
+}
+
+.code-pill {
+    background: #e2e8f0;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 0.9em;
+    font-weight: 700;
+    font-family: 'Courier New', monospace;
+    white-space: nowrap;
+    display: inline-block;
+}
+
+.rate-up {
+    background: #fed7d7;
+    color: #c53030;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-weight: 700;
+}
+
+.rate-down {
+    background: #c6f6d5;
+    color: #22543d;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-weight: 700;
+}
+
+.rate-flat {
+    background: #bee3f8;
+    color: #2c5282;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-weight: 700;
+}
+
+.desc-cell {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.impact {
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+.impact.Cheaper {
+    background: #c6f6d5;
+    color: #22543d;
+}
+
+.impact.Costlier {
+    background: #fed7d7;
+    color: #c53030;
+}
+
+.impact.Unchanged {
+    background: #e2e8f0;
+    color: #4a5568;
+}
+
+.service-item {
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    border-left: 4px solid #4a5568;
+    transition: all 0.3s ease;
+}
+
+.service-item:hover {
+    background: #e2e8f0;
+    transform: translateX(5px);
+}
+
+.service-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.service-icon {
+    font-size: 2rem;
+}
+
+.service-code {
+    background: #4a5568;
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.service-desc {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #4a5568;
+    margin-bottom: 1rem;
+}
+
+.rate-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.rate-change {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+}
+
+.rate-from {
+    color: #e53e3e;
+}
+
+.rate-to {
+    color: #38a169;
+}
+
+.impact-badge {
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.impact-cheaper {
+    background: #c6f6d5;
+    color: #22543d;
+}
+
+.impact-costlier {
+    background: #fed7d7;
+    color: #c53030;
+}
+
+.impact-unchanged {
+    background: #e2e8f0;
+    color: #4a5568;
+}
+
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .container {
+        padding: 1rem;
+    }
+    
+    .main-selector {
+        flex-direction: column;
+    }
+    
+    .summary-cards {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        padding: 1rem;
+    }
+    
+    .modal-content {
+        width: 95%;
+        height: 90vh;
+    }
+}
+</style>
+</head>
+<body>
+    <div class="header">
+        <h1>Key Recommendations made in the 56th GST Council Meeting</h1>
+        <p class="subtitle">Get to know which product or service is now Cheaper, Costlier, remained unchanged</p>
+        <div class="presenter-info">
+            <h3>Surti Consultancy (Smit Shah) </h3>
+            <p class="company"></p>
+            <p></p>
+            <p>📞 +91 9510938071</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="main-selector">
+            <div class="main-btn active" id="goodsBtn" onclick="showSection(&#39;goods&#39;)">
+                <div class="main-btn-icon">📦</div>
+                <div class="main-btn-text">GOODS</div>
+            </div>
+            <div class="main-btn" id="servicesBtn" onclick="showSection(&#39;services&#39;)">
+                <div class="main-btn-icon">🛠️</div>
+                <div class="main-btn-text">SERVICES</div>
+            </div>
+        </div>
+
+        <div class="filter-section active" id="goodsFilter">
+            <select class="filter-dropdown" id="goodsSectorFilter">
+                <option value="">Select a Goods Sector to View Details</option>
+                <option value="TRANSPORTATION SECTOR">🚗 Transportation Sector</option>
+                <option value="TEXTILE SECTOR">🧵 Textile Sector</option>
+                <option value="FERTILIZER SECTOR">🌱 Fertilizer Sector</option>
+                <option value="HANDICRAFTS SECTOR">🎨 Handicrafts Sector</option>
+                <option value="HEALTH SECTOR">🏥 Health Sector</option>
+                <option value="MISCELLANEOUS ITEMS">📦 Miscellaneous Items</option>
+                <option value="TOBACCO">🚬 Tobacco</option>
+                <option value="FOOD SECTOR">🍎 Food Sector</option>
+                <option value="AGRICULTURE">🚜 Agriculture</option>
+                <option value="COAL">⛏️ Coal</option>
+                <option value="RENEWABLE ENERGY">♻️ Renewable Energy</option>
+                <option value="EDUCATION">📚 Education</option>
+                <option value="COMMON MAN ITEMS">🛒 Common Man Items</option>
+                <option value="PAPER">📄 Paper</option>
+                <option value="FOOTWEAR">👟 Footwear</option>
+                <option value="LEATHER SECTOR">🦌 Leather Sector</option>
+                <option value="OTHER MACHINERY">⚙️ Other Machinery</option>
+                <option value="OTHER PROPOSALS">💎 Other Proposals</option>
+                <option value="SPORTS GOODS &amp; TOYS">⚽ Sports Goods &amp; Toys</option>
+                <option value="WOOD SECTOR">🌳 Wood Sector</option>
+                <option value="CONSTRUCTION SECTOR">🏗️ Construction Sector</option>
+                <option value="CONSUMER ELECTRONICS">📱 Consumer Electronics</option>
+                <option value="DEFENCE">🛡️ Defence</option>
+            </select>
+        </div>
+
+        <div class="filter-section" id="servicesFilter">
+            <select class="filter-dropdown" id="servicesSectorFilter">
+                <option value="">Select a Service Sector to View Details</option>
+                <option value="INSURANCE SERVICES">🛡️ Insurance Services</option>
+                <option value="LOCAL DELIVERY SERVICES">📦 Local Delivery Services</option>
+                <option value="OTHER SERVICES">🔧 Other Services</option>
+                <option value="TRANSPORTATION SERVICES">🚛 Transportation Services</option>
+                <option value="JOB WORK SERVICES">🏭 Job Work Services</option>
+                <option value="CONSTRUCTION SERVICES">🏗️ Construction Services</option>
+                <option value="ENTERTAINMENT &amp; GAMING SERVICES">🎰 Entertainment &amp; Gaming Services</option>
+            </select>
+        </div>
+
+        <div id="sectorsContainer"><div class="sector-card active" id="goods-TRANSPORTATIONSECTOR">
+        <div class="sector-header" onclick="toggleSector(&#39;goods-TRANSPORTATIONSECTOR&#39;)">
+            <div class="sector-title">
+                <span class="sector-icon">🚗</span>
+                <span>TRANSPORTATION SECTOR</span>
+            </div>
+            <span class="expand-icon">▼</span>
+        </div>
+        <div class="sector-content" id="content-goods-TRANSPORTATIONSECTOR">
+            <div class="summary-cards">
+                <div class="summary-card" onclick="showGoodsDetails(&#39;TRANSPORTATION SECTOR&#39;, &#39;all&#39;)">
+                    <div class="card-title">Total Items</div>
+                    <div class="card-number">23</div>
+                </div>
+                <div class="summary-card cheaper" onclick="showGoodsDetails(&#39;TRANSPORTATION SECTOR&#39;, &#39;cheaper&#39;)">
+                    <div class="card-title">Cheaper</div>
+                    <div class="card-number">17</div>
+                </div>
+                <div class="summary-card costlier" onclick="showGoodsDetails(&#39;TRANSPORTATION SECTOR&#39;, &#39;costlier&#39;)">
+                    <div class="card-title">Costlier</div>
+                    <div class="card-number">6</div>
+                </div>
+                <div class="summary-card unchanged" onclick="showGoodsDetails(&#39;TRANSPORTATION SECTOR&#39;, &#39;unchanged&#39;)">
+                    <div class="card-title">Unchanged</div>
+                    <div class="card-number">0</div>
+                </div>
+            </div>
+        </div>
+    </div><div class="sector-card active" id="goods-TEXTILESECTOR">
+        <div class="sector-header" onclick="toggleSector(&#39;goods-TEXTILESECTOR&#39;)">
+            <div class="sector-title">
+                <span class="sector-icon">🧵</span>
+                <span>TEXTILE SECTOR</span>
+            </div>
+            <span class="expand-icon">▼</span>
+        </div>
+        <div class="sector-content" id="content-goods-TEXTILESECTOR">
+            <div class="summary-cards">
+                <div class="summary-card" onclick="showGoodsDetails(&#39;TEXTILE SECTOR&#39;, &#39;all&#39;)">
+                    <div class="card-title">Total Items</div>
+                    <div class="card-number">25</div>
+                </div>
+                <div class="summary-card cheaper" onclick="showGoodsDetails(&#39;TEXTILE SECTOR&#39;, &#39;cheaper&#39;)">
+                    <div class="card-title">Cheaper</div>
+                    <div class="card-number">20</div>
+                </div>
+                <div class="summary-card costlier" onclick="showGoodsDetails(&#39;TEXTILE SECTOR&#39;, &#39;costlier&#39;)">
+                    <div class="card-title">Costlier</div>
+                    <div class="card-number">1</div>
+                </div>
+                <div class="summary-card unchanged" onclick="showGoodsDetails(&#39;TEXTILE SECTOR&#39;, &#39;unchanged&#39;)">
+                    <div class="card-title">Unchanged</div>
+                    <div class="card-number">4</div>
+                </div>
+            </div>
+        </div>
+    </div><div class="sector-card active" id="goods-FERTILIZERSECTOR">
+        <div class="sector-header" onclick="toggleSector(&#39;goods-FERTILIZERSECTOR&#39;)">
+            <div class="sector-title">
+                <span class="sector-icon">🌱</span>
+                <span>FERTILIZER SECTOR</span>
+            </div>
+            <span class="expand-icon">▼</span>
+        </div>
+        <div class="sector-content" id="content-goods-FERTILIZERSECTOR">
+            <div class="summary-cards">
+                <div class="summary-card" onclick="showGoodsDetails(&#39;FERTILIZER SECTOR&#39;, &#39;all&#39;)">
+                    <div class="card-title">Total Items</div>
+                    <div class="card-number">22</div>
+                </div>
+                <div class="summary-card cheaper" onclick="showGoodsDetails(&#39;FERTILIZER SECTOR&#39;, &#39;cheaper&#39;)">
+                    <div class="card-title">Cheaper</div>
+                    <div class="card-number">22</div>
+                </div>
+                <div class="summary-card costlier" onclick="showGoodsDetails(&#39;FERTILIZER SECTOR&#39;, &#39;costlier&#39;)">
+                    <div class="card-title">Costlier</div>
+                    <div class="card-number">0</div>
+                </div>
+                <div class="summary-card unchanged" onclick="showGoodsDetails(&#39;FERTILIZER SECTOR&#39;, &#39;unchanged&#39;)">
+                    <div class="card-title">Unchanged</div>
+                    <div class="card-number">0</div>
+                </div>
+            </div>
+        </div>
+    </div><div class="sector-card active" id="goods-HANDICRAFTSSECTOR">
+        <div class="sector-header" onclick="toggleSector(&#39;goods-HANDICRAFTSSECTOR&#39;)">
+            <div class="sector-title">
+                <span class="sector-icon">🎨</span>
+                <span>HANDICRAFTS SECTOR</span>
+            </div>
+            <span class="expand-icon">▼</span>
+        </div>
+        <div class="sector-content" id="content-goods-HANDICRAFTSSECTOR">
+            <div class="summary-cards">
+                <div class="summary-card" onclick="showGoodsDetails(&#39;HANDICRAFTS SECTOR&#39;, &#39;all&#39;)">
+                    <div class="card-title">Total Items</div>
+                    <div class="card-number">21</div>
+                </div>
+                <div class="summary-card cheaper" onclick="showGoodsDetails(&#39;HANDICRAFTS SECTOR&#39;, &#39;cheaper&#39;)">
+                    <div class="card-title">Cheaper</div>
+                    <div class="card-number">21</div>
+                </div>
+                <div class="summary-card costlier" onclick="showGoodsDetails(&#39;HANDICRAFTS SECTOR&#39;, &#39;costlier&#39;)">
+                    <div class="card-title">Costlier</div>
+                    <div class="card-number">0</div>
+                </div>
+                <div class="summary-card unchanged" onclick="showGoodsDetails(&#39;HANDICRAFTS SECTOR&#39;, &#39;unchanged&#39;)">
+                    <div class="card-title">Unchanged</div>
+                    <div class="card-number">0</div>
+                </div>
+            </div>
+        </div>
+    </div><div class="sector-card active" id="goods-HEALTHSECTOR">
+        <div class="sector-header" onclick="toggleSector(&#39;goods-HEALTHSECTOR&#39;)">
+            <div class="sector-title">
+                <span class="sector-icon">🏥</span>
+                <span>HEALTH SECTOR</span>
+            </div>
+            <span class="expand-icon">▼</span>
+        </div>
+        <div class="sector-content" id="content-goods-HEALTHSECTOR">
+            <div class="summary-cards">
+                <div class="summary-card" onclick="showGoodsDetails(&#39;HEALTH SECTOR&#39;, &#39;all&#39;)">
+                    <div class="card-title">Total Items</div>
+                    <div class="card-number">25</div>
+                </div>
+                <div class="summary-card cheaper" onclick="showGoodsDetails(&#39;HEALTH SECTOR&#39;, &#39;cheaper&#39;)">
+                    <div class="card-title">Cheaper</div>
+                    <div class="card-number">25</div>
+                </div>
+                <div class="summary-card costlier" onclick="showGoodsDetails(&#39;HEALTH SECTOR&#39;, &#39;costlier&#39;)">
+                    <div class="card-title">Costlier</div>
+                    <div class="card-number">0</div>
+                </div>
+                <div class="summary-card unchanged" onclick="showGoodsDetails(&#39;HEALTH SECTOR&#39;, &#39;unchanged&#39;)">
+                    <div class="card-title">Unchanged</div>
+                    <div class="card-number">0</div>
+                </div>
+            </div>
+        </div>
+    </div><div class="sector-card active" id="goods-MISCELLANEOUSITEMS">
+        <div class="sector-header" onclick="toggleSector(&#39;goods-MISCELLANEOUSITEMS&#39;)">
+            <div class="sector-title">
+                <span class="sector-icon">📦</span>
+                <span>MISCELLANEOUS ITEMS</span>
+            </div>
+            <span class="expand-icon">▼</span>
+        </div>
+        <div class="sector-content" id="content-goods-MISCELLANEOUSITEMS">
+            <div class="summary-cards">
+                <div class="summary-card" onclick="showGoodsDetails(&#39;MISCELLANEOUS ITEMS&#39;, &#39;all&#39;)">
+                    <div class="card-title">Total Items</div>
+                    <div class="card-number">19</div>
+                </div>
+                <div class="summary-card cheaper" onclick="showGoodsDetails(&#39;MISCELLANEOUS ITEMS&#39;, &#39;cheaper&#39;)">
+                    <div class="card-title">Cheaper</div>
+                    <div class="card-number">13</div>
+                </div>
+                <div class="summary-card costlier" onclick="showGoodsDetails(&#39;MISCELLANEOUS ITEMS&#39;, &#39;costlier&#39;)">
+                    <div class="card-title">Costlier</div>
+                    <div class="card-number">6</div>
+                </div>
+                <div class="summary-card unchanged" onclick="showGoodsDetails(&#39;MISCELLANEOUS ITEMS&#39;, &#39;unchanged&#39;)">
+                    <div class="card-title">Unchanged</div>
+                    <div class="card-number">0</div>
+                </div>
+            </div>
+        </div>
+    </div><div class="sector-card active" id="goods-TOBACCO">
+        <div class="sector-header" onclick="toggleSector(&#39;goods-TOBACCO&#39;)">
+            <div class="sector-title">
+                <span class="sector-icon">🚬</span>
+                <span>TOBACCO</span>
+            </div>
+            <span class="expand-icon">▼</span>
+        </div>
+        <div class="sector-content" id="content-goods-TOBACCO">
+            <div class="summary-cards">
+                <div class="summary-card" onclick="showGoodsDetails(&#39;TOBACCO&#39;, &#39;all&#39;)">
+                    <div class="card-title">Total Items</div>
+                    <div class="card-number">7</div>
+                </div>
+                <div class="summary-card cheaper" onclick="showGoodsDetails(&#39;TOBACCO&#39;, &#39;cheaper&#39;)">
+                    <div class="card-title">Cheaper</div>
+                    <div class="card-number">2</div>
+                </div>
+                <div class="summary-card costlier" onclick="showGoodsDetails(&#39;TOBACCO&#39;, &#39;costlier&#39;)">
+                    <div class="card-title">Costlier</div>
+                    <div class="card-number">5</div>
+                </div>
+                <div class="summary-card unchanged" onclick="showGoodsDetails(&#39;TOBACCO&#39;, &#39;unchanged&#39;)">
+                    <div class="card-title">Unchanged</div>
+                    <div class="card-number">0</div>
+                </div>
+            </div>
+        </div>
+    </div><div class="sector-card active" id="goods-FOODSECTOR">
+        <div class="sector-header" onclick="toggleSector(&#39;goods-FOODSECTOR&#39;)">
+            <div class="sector-title">
+                <span class="sector-icon">🍎</span>
+                <span>FOOD SECTOR</span>
+            </div>
+            <span class="expand-icon">▼</span>
+        </div>
+        <div class="sector-content" id="content-goods-FOODSECTOR">
+            <div class="summary-cards">
+                <div class="summary-card" onclick="showGoodsDetails(&#39;FOOD SECTOR&#39;, &#39;all&#39;)">
+                    <div class="card-title">Total Items</div>
+                    <div class="card-number">80</div>
+                </div>
+                <div class="summary-card cheaper" onclick="showGoodsDetails(&#39;FOOD SECTOR&#39;, &#39;cheaper&#39;)">
+                    <div class="card-title">Cheaper</div>
+                    <div class="card-number">75</div>
+                </div>
+                <div class="summary-card costlier" onclick="showGoodsDetails(&#39;FOOD SECTOR&#39;, &#39;costlier&#39;)">
+                    <div class="card-title">Costlier</div>
+                    <div class="card-number">5</div>
+                </div>
+                <div class="summary-card unchanged" onclick="showGoodsDetails(&#39;FOOD SECTOR&#39;, &#39;unchanged&#39;)">
+                    <div class="card-title">Unchanged</div>
+                    <div class="card-number">0</div>
+                </div>
+            </div>
+        </div>
+    </div><div class="sector-card active" id="goods-AGRICULTURE">
+        <div class="sector-header" onclick="toggleSector(&#39;goods-AGRICULTURE&#39;)">
+            <div class="sector-title">
+                <span class="sector-icon">🚜</span>
+                <span>AGRICULTURE</span>
+            </div>
+            <span class="expand-icon">▼</span>
+        </div>
+        <div class="sector-content" id="content-goods-AGRICULTURE">
+            <div class="summary-cards">
+                <div class="summary-card" onclick="showGoodsDetails(&#39;AGRICULTURE&#39;, &#39;all&#39;)">
+                    <div class="card-title">Total Items</div>
+                    <div class="card-number">11</div>
+                </div>
+                <div class="summary-card cheaper" onclick="showGoodsDetails(&#39;AGRICULTURE&#39;, &#39;cheaper&#39;)">
+                    <div class="card-title">Cheaper</div>
+                    <div class="card-number">11</div>
+                </div>
+                <div class="summary-card costlier" onclick="showGoodsDetails(&#39;AGRICULTURE&#39;, &#39;costlier&#39;)">
+                    <div class="card-title">Costlier</div>
+                    <div class="card-number">0</div>
+                </div>
+                <div class="summary-card unchanged" onclick="showGoodsDetails(&#39;AGRICULTURE&#39;, &#39;unchanged&#39;)">
+                    <div class="card-title">Unchanged</div>
+                    <div class="card-number">0</div>
+                </div>
+            </div>
+        </div>
+    </div><div class="sector-card active" id="goods-COAL">
+        <div class="sector-header" onclick="toggleSector(&#39;goods-COAL&#39;)">
+            <div class="sector-title">
+                <span class="sector-icon">⛏️</span>
+                <span>COAL</span>
+            </div>
+            <span class="expand-icon">▼</span>
+        </div>
+        <div class="sector-content" id="content-goods-COAL">
+            <div class="summary-cards">
+                <div class="summary-card" onclick="showGoodsDetails(&#39;COAL&#39;, &#39;all&#39;)">
+                    <div class="card-title">Total Items</div>
+                    <div class="card-number">3</div>
+                </div>
+                <div class="summary-card cheaper" onclick="showGoodsDetails(&#39;COAL&#39;, &#39;cheaper&#39;)">
+                    <div class="card-title">Cheaper</div>
+                    <div class="card-number">0</div>
+                </div>
+                <div class="summary-card costlier" onclick="showGoodsDetails(&#39;COAL&#39;, &#39;costlier&#39;)">
+                    <div class="card-title">Costlier</div>
+                    <div class="card-number">3</div>
+                </div>
+                <div class="summary-card unchanged" onclick="showGoodsDetails(&#39;COAL&#39;, &#39;unchanged&#39;)">
+                    <div class="card-title">Unchanged</div>
+                    <div class="card-number">0</div>
+                </div>
+            </div>
+        </div>
+    </div><div class="sector-card active" id="goods-RENEWABLEENERGY">
+        <div class="sector-header" onclick="toggleSector(&#39;goods-RENEWABLEENERGY&#39;)">
+            <div class="sector-title">
+                <span class="sector-icon">♻️</span>
+                <span>RENEWABLE ENERGY</span>
+            </div>
+            <span class="expand-icon">▼</span>
+        </div>
+        <div class="sector-content" id="content-goods-RENEWABLEENERGY">
+            <div class="summary-cards">
+                <div class="summary-card" onclick="showGoodsDetails(&#39;RENEWABLE ENERGY&#39;, &#39;all&#39;)">
+                    <div class="card-title">Total Items</div>
+                    <div class="card-number">4</div>
+                </div>
+                <div class="summary-card cheaper" onclick="showGoodsDetails(&#39;RENEWABLE ENERGY&#39;, &#39;cheaper&#39;)">
+                    <div class="card-title">Cheaper</div>
+                    <div class="card-number">4</div>
+                </div>
+                <div class="summary-card costlier" onclick="showGoodsDetails(&#39;RENEWABLE ENERGY&#39;, &#39;costlier&#39;)">
+                    <div class="card-title">Costlier</div>
+                    <div class="card-number">0</div>
+                </div>
+                <div class="summary-card unchanged" onclick="showGoodsDetails(&#39;RENEWABLE ENERGY&#39;, &#39;unchanged&#39;)">
+                    <div class="card-title">Unchanged</div>
+                    <div class="card-number">0</div>
+                </div>
+            </div>
+        </div>
+    </div><div class="sector-card active" id="goods-EDUCATION">
+        <div class="sector-header" onclick="toggleSector(&#39;goods-EDUCATION&#39;)">
+            <div class="sector-title">
+                <span class="sector-icon">📚</span>
+                <span>EDUCATION</span>
+            </div>
+            <span class="expand-icon">▼</span>
+        </div>
+        <div class="sector-content" id="content-goods-EDUCATION">
+            <div class="summary-cards">
+                <div class="summary-card" onclick="showGoodsDetails(&#39;EDUCATION&#39;, &#39;all&#39;)">
+                    <div class="card-title">Total Items</div>
+                    <div class="card-number">6</div>
+                </div>
+                <div class="summary-card cheaper" onclick="showGoodsDetails(&#39;EDUCATION&#39;, &#39;cheaper&#39;)">
+                    <div class="card-title">Cheaper</div>
+                    <div class="card-number">6</div>
+                </div>
+                <div class="summary-card costlier" onclick="showGoodsDetails(&#39;EDUCATION&#39;, &#39;costlier&#39;)">
+                    <div class="card-title">Costlier</div>
+                    <div class="card-number">0</div>
+                </div>
+                <div class="summary-card unchanged" onclick="showGoodsDetails(&#39;EDUCATION&#39;, &#39;unchanged&#39;)">
+                    <div class="card-title">Unchanged</div>
+                    <div class="card-number">0</div>
+                </div>
+            </div>
+        </div>
+    </div><div class="sector-card active" id="goods-COMMONMANITEMS">
+        <div class="sector-header" onclick="toggleSector(&#39;goods-COMMONMANITEMS&#39;)">
+            <div class="sector-title">
+                <span class="sector-icon">🛒</span>
+                <span>COMMON MAN ITEMS</span>
+            </div>
+            <span class="expand-icon">▼</span>
+        </div>
+        <div class="sector-content" id="content-goods-COMMONMANITEMS">
+            <div class="summary-cards">
+                <div class="summary-card" onclick="showGoodsDetails(&#39;COMMON MAN ITEMS&#39;, &#39;all&#39;)">
+                    <div class="card-title">Total Items</div>
+                    <div class="card-number">31</div>
+                </div>
+                <div class="summary-card cheaper" onclick="showGoodsDetails(&#39;COMMON MAN ITEMS&#39;, &#39;cheaper&#39;)">
+                    <div class="card-title">Cheaper</div>
+                    <div class="card-number">31</div>
+                </div>
+                <div class="summary-card costlier" onclick="showGoodsDetails(&#39;COMMON MAN ITEMS&#39;, &#39;costlier&#39;)">
+                    <div class="card-title">Costlier</div>
+                    <div class="card-number">0</div>
+                </div>
+                <div class="summary-card unchanged" onclick="showGoodsDetails(&#39;COMMON MAN ITEMS&#39;, &#39;unchanged&#39;)">
+                    <div class="card-title">Unchanged</div>
+                    <div class="card-number">0</div>
+                </div>
+            </div>
+        </div>
+    </div><div class="sector-card active" id="goods-PAPER">
+        <div class="sector-header" onclick="toggleSector(&#39;goods-PAPER&#39;)">
+            <div class="sector-title">
+                <span class="sector-icon">📄</span>
+                <span>PAPER</span>
+            </div>
+            <span class="expand-icon">▼</span>
+        </div>
+        <div class="sector-content" id="content-goods-PAPER">
+            <div class="summary-cards">
+                <div class="summary-card" onclick="showGoodsDetails(&#39;PAPER&#39;, &#39;all&#39;)">
+                    <div class="card-title">Total Items</div>
+                    <div class="card-number">19</div>
+                </div>
+                <div class="summary-card cheaper" onclick="showGoodsDetails(&#39;PAPER&#39;, &#39;cheaper&#39;)">
+                    <div class="card-title">Cheaper</div>
+                    <div class="card-number">10</div>
+                </div>
+                <div class="summary-card costlier" onclick="showGoodsDetails(&#39;PAPER&#39;, &#39;costlier&#39;)">
+                    <div class="card-title">Costlier</div>
+                    <div class="card-number">9</div>
+                </div>
+                <div class="summary-card unchanged" onclick="showGoodsDetails(&#39;PAPER&#39;, &#39;unchanged&#39;)">
+                    <div class="card-title">Unchanged</div>
+                    <div class="card-number">0</div>
+                </div>
+            </div>
+        </div>
+    </div><div class="sector-card active" id="goods-FOOTWEAR">
+        <div class="sector-header" onclick="toggleSector(&#39;goods-FOOTWEAR&#39;)">
+            <div class="sector-title">
+                <span class="sector-icon">👟</span>
+                <span>FOOTWEAR</span>
+            </div>
+            <span class="expand-icon">▼</span>
+        </div>
+        <div class="sector-content" id="content-goods-FOOTWEAR">
+            <div class="summary-cards">
+                <div class="summary-card" onclick="showGoodsDetails(&#39;FOOTWEAR&#39;, &#39;all&#39;)">
+                    <div class="card-title">Total Items</div>
+                    <div class="card-number">2</div>
+                </div>
+                <div class="summary-card cheaper" onclick="showGoodsDetails(&#39;FOOTWEAR&#39;, &#39;cheaper&#39;)">
+                    <div class="card-title">Cheaper</div>
+                    <div class="card-number">1</div>
+                </div>
+                <div class="summary-card costlier" onclick="showGoodsDetails(&#39;FOOTWEAR&#39;, &#39;costlier&#39;)">
+                    <div class="card-title">Costlier</div>
+                    <div class="card-number">0</div>
+                </div>
+                <div class="summary-card unchanged" onclick="showGoodsDetails(&#39;FOOTWEAR&#39;, &#39;unchanged&#39;)">
+                    <div class="card-title">Unchanged</div>
+                    <div class="card-number">1</div>
+                </div>
+            </div>
+        </div>
+    </div><div class="sector-card active" id="goods-LEATHERSECTOR">
+        <div class="sector-header" onclick="toggleSector(&#39;goods-LEATHERSECTOR&#39;)">
+            <div class="sector-title">
+                <span class="sector-icon">🦌</span>
+                <span>LEATHER SECTOR</span>
+            </div>
+            <span class="expand-icon">▼</span>
+        </div>
+        <div class="sector-content" id="content-goods-LEATHERSECTOR">
+            <div class="summary-cards">
+                <div class="summary-card" onclick="showGoodsDetails(&#39;LEATHER SECTOR&#39;, &#39;all&#39;)">
+                    <div class="card-title">Total Items</div>
+                    <div class="card-number">6</div>
+                </div>
+                <div class="summary-card cheaper" onclick="showGoodsDetails(&#39;LEATHER SECTOR&#39;, &#39;cheaper&#39;)">
+                    <div class="card-title">Cheaper</div>
+                    <div class="card-number">6</div>
+                </div>
+                <div class="summary-card costlier" onclick="showGoodsDetails(&#39;LEATHER SECTOR&#39;, &#39;costlier&#39;)">
+                    <div class="card-title">Costlier</div>
+                    <div class="card-number">0</div>
+                </div>
+                <div class="summary-card unchanged" onclick="showGoodsDetails(&#39;LEATHER SECTOR&#39;, &#39;unchanged&#39;)">
+                    <div class="card-title">Unchanged</div>
+                    <div class="card-number">0</div>
+                </div>
+            </div>
+        </div>
+    </div><div class="sector-card active" id="goods-OTHERMACHINERY">
+        <div class="sector-header" onclick="toggleSector(&#39;goods-OTHERMACHINERY&#39;)">
+            <div class="sector-title">
+                <span class="sector-icon">⚙️</span>
+                <span>OTHER MACHINERY</span>
+            </div>
+            <span class="expand-icon">▼</span>
+        </div>
+        <div class="sector-content" id="content-goods-OTHERMACHINERY">
+            <div class="summary-cards">
+                <div class="summary-card" onclick="showGoodsDetails(&#39;OTHER MACHINERY&#39;, &#39;all&#39;)">
+                    <div class="card-title">Total Items</div>
+                    <div class="card-number">7</div>
+                </div>
+                <div class="summary-card cheaper" onclick="showGoodsDetails(&#39;OTHER MACHINERY&#39;, &#39;cheaper&#39;)">
+                    <div class="card-title">Cheaper</div>
+                    <div class="card-number">7</div>
+                </div>
+                <div class="summary-card costlier" onclick="showGoodsDetails(&#39;OTHER MACHINERY&#39;, &#39;costlier&#39;)">
+                    <div class="card-title">Costlier</div>
+                    <div class="card-number">0</div>
+                </div>
+                <div class="summary-card unchanged" onclick="showGoodsDetails(&#39;OTHER MACHINERY&#39;, &#39;unchanged&#39;)">
+                    <div class="card-title">Unchanged</div>
+                    <div class="card-number">0</div>
+                </div>
+            </div>
+        </div>
+    </div><div class="sector-card active" id="goods-OTHERPROPOSALS">
+        <div class="sector-header" onclick="toggleSector(&#39;goods-OTHERPROPOSALS&#39;)">
+            <div class="sector-title">
+                <span class="sector-icon">💎</span>
+                <span>OTHER PROPOSALS</span>
+            </div>
+            <span class="expand-icon">▼</span>
+        </div>
+        <div class="sector-content" id="content-goods-OTHERPROPOSALS">
+            <div class="summary-cards">
+                <div class="summary-card" onclick="showGoodsDetails(&#39;OTHER PROPOSALS&#39;, &#39;all&#39;)">
+                    <div class="card-title">Total Items</div>
+                    <div class="card-number">21</div>
+                </div>
+                <div class="summary-card cheaper" onclick="showGoodsDetails(&#39;OTHER PROPOSALS&#39;, &#39;cheaper&#39;)">
+                    <div class="card-title">Cheaper</div>
+                    <div class="card-number">21</div>
+                </div>
+                <div class="summary-card costlier" onclick="showGoodsDetails(&#39;OTHER PROPOSALS&#39;, &#39;costlier&#39;)">
+                    <div class="card-title">Costlier</div>
+                    <div class="card-number">0</div>
+                </div>
+                <div class="summary-card unchanged" onclick="showGoodsDetails(&#39;OTHER PROPOSALS&#39;, &#39;unchanged&#39;)">
+                    <div class="card-title">Unchanged</div>
+                    <div class="card-number">0</div>
+                </div>
+            </div>
+        </div>
+    </div><div class="sector-card active" id="goods-SPORTSGOODS&amp;TOYS">
+        <div class="sector-header" onclick="toggleSector(&#39;goods-SPORTSGOODS&amp;TOYS&#39;)">
+            <div class="sector-title">
+                <span class="sector-icon">⚽</span>
+                <span>SPORTS GOODS &amp; TOYS</span>
+            </div>
+            <span class="expand-icon">▼</span>
+        </div>
+        <div class="sector-content" id="content-goods-SPORTSGOODS&amp;TOYS">
+            <div class="summary-cards">
+                <div class="summary-card" onclick="showGoodsDetails(&#39;SPORTS GOODS &amp; TOYS&#39;, &#39;all&#39;)">
+                    <div class="card-title">Total Items</div>
+                    <div class="card-number">6</div>
+                </div>
+                <div class="summary-card cheaper" onclick="showGoodsDetails(&#39;SPORTS GOODS &amp; TOYS&#39;, &#39;cheaper&#39;)">
+                    <div class="card-title">Cheaper</div>
+                    <div class="card-number">6</div>
+                </div>
+                <div class="summary-card costlier" onclick="showGoodsDetails(&#39;SPORTS GOODS &amp; TOYS&#39;, &#39;costlier&#39;)">
+                    <div class="card-title">Costlier</div>
+                    <div class="card-number">0</div>
+                </div>
+                <div class="summary-card unchanged" onclick="showGoodsDetails(&#39;SPORTS GOODS &amp; TOYS&#39;, &#39;unchanged&#39;)">
+                    <div class="card-title">Unchanged</div>
+                    <div class="card-number">0</div>
+                </div>
+            </div>
+        </div>
+    </div><div class="sector-card active" id="goods-WOODSECTOR">
+        <div class="sector-header" onclick="toggleSector(&#39;goods-WOODSECTOR&#39;)">
+            <div class="sector-title">
+                <span class="sector-icon">🌳</span>
+                <span>WOOD SECTOR</span>
+            </div>
+            <span class="expand-icon">▼</span>
+        </div>
+        <div class="sector-content" id="content-goods-WOODSECTOR">
+            <div class="summary-cards">
+                <div class="summary-card" onclick="showGoodsDetails(&#39;WOOD SECTOR&#39;, &#39;all&#39;)">
+                    <div class="card-title">Total Items</div>
+                    <div class="card-number">15</div>
+                </div>
+                <div class="summary-card cheaper" onclick="showGoodsDetails(&#39;WOOD SECTOR&#39;, &#39;cheaper&#39;)">
+                    <div class="card-title">Cheaper</div>
+                    <div class="card-number">15</div>
+                </div>
+                <div class="summary-card costlier" onclick="showGoodsDetails(&#39;WOOD SECTOR&#39;, &#39;costlier&#39;)">
+                    <div class="card-title">Costlier</div>
+                    <div class="card-number">0</div>
+                </div>
+                <div class="summary-card unchanged" onclick="showGoodsDetails(&#39;WOOD SECTOR&#39;, &#39;unchanged&#39;)">
+                    <div class="card-title">Unchanged</div>
+                    <div class="card-number">0</div>
+                </div>
+            </div>
+        </div>
+    </div><div class="sector-card active" id="goods-CONSTRUCTIONSECTOR">
+        <div class="sector-header" onclick="toggleSector(&#39;goods-CONSTRUCTIONSECTOR&#39;)">
+            <div class="sector-title">
+                <span class="sector-icon">🏗️</span>
+                <span>CONSTRUCTION SECTOR</span>
+            </div>
+            <span class="expand-icon">▼</span>
+        </div>
+        <div class="sector-content" id="content-goods-CONSTRUCTIONSECTOR">
+            <div class="summary-cards">
+                <div class="summary-card" onclick="showGoodsDetails(&#39;CONSTRUCTION SECTOR&#39;, &#39;all&#39;)">
+                    <div class="card-title">Total Items</div>
+                    <div class="card-number">2</div>
+                </div>
+                <div class="summary-card cheaper" onclick="showGoodsDetails(&#39;CONSTRUCTION SECTOR&#39;, &#39;cheaper&#39;)">
+                    <div class="card-title">Cheaper</div>
+                    <div class="card-number">2</div>
+                </div>
+                <div class="summary-card costlier" onclick="showGoodsDetails(&#39;CONSTRUCTION SECTOR&#39;, &#39;costlier&#39;)">
+                    <div class="card-title">Costlier</div>
+                    <div class="card-number">0</div>
+                </div>
+                <div class="summary-card unchanged" onclick="showGoodsDetails(&#39;CONSTRUCTION SECTOR&#39;, &#39;unchanged&#39;)">
+                    <div class="card-title">Unchanged</div>
+                    <div class="card-number">0</div>
+                </div>
+            </div>
+        </div>
+    </div><div class="sector-card active" id="goods-CONSUMERELECTRONICS">
+        <div class="sector-header" onclick="toggleSector(&#39;goods-CONSUMERELECTRONICS&#39;)">
+            <div class="sector-title">
+                <span class="sector-icon">📱</span>
+                <span>CONSUMER ELECTRONICS</span>
+            </div>
+            <span class="expand-icon">▼</span>
+        </div>
+        <div class="sector-content" id="content-goods-CONSUMERELECTRONICS">
+            <div class="summary-cards">
+                <div class="summary-card" onclick="showGoodsDetails(&#39;CONSUMER ELECTRONICS&#39;, &#39;all&#39;)">
+                    <div class="card-title">Total Items</div>
+                    <div class="card-number">3</div>
+                </div>
+                <div class="summary-card cheaper" onclick="showGoodsDetails(&#39;CONSUMER ELECTRONICS&#39;, &#39;cheaper&#39;)">
+                    <div class="card-title">Cheaper</div>
+                    <div class="card-number">3</div>
+                </div>
+                <div class="summary-card costlier" onclick="showGoodsDetails(&#39;CONSUMER ELECTRONICS&#39;, &#39;costlier&#39;)">
+                    <div class="card-title">Costlier</div>
+                    <div class="card-number">0</div>
+                </div>
+                <div class="summary-card unchanged" onclick="showGoodsDetails(&#39;CONSUMER ELECTRONICS&#39;, &#39;unchanged&#39;)">
+                    <div class="card-title">Unchanged</div>
+                    <div class="card-number">0</div>
+                </div>
+            </div>
+        </div>
+    </div><div class="sector-card active" id="goods-DEFENCE">
+        <div class="sector-header" onclick="toggleSector(&#39;goods-DEFENCE&#39;)">
+            <div class="sector-title">
+                <span class="sector-icon">🛡️</span>
+                <span>DEFENCE</span>
+            </div>
+            <span class="expand-icon">▼</span>
+        </div>
+        <div class="sector-content" id="content-goods-DEFENCE">
+            <div class="summary-cards">
+                <div class="summary-card" onclick="showGoodsDetails(&#39;DEFENCE&#39;, &#39;all&#39;)">
+                    <div class="card-title">Total Items</div>
+                    <div class="card-number">2</div>
+                </div>
+                <div class="summary-card cheaper" onclick="showGoodsDetails(&#39;DEFENCE&#39;, &#39;cheaper&#39;)">
+                    <div class="card-title">Cheaper</div>
+                    <div class="card-number">2</div>
+                </div>
+                <div class="summary-card costlier" onclick="showGoodsDetails(&#39;DEFENCE&#39;, &#39;costlier&#39;)">
+                    <div class="card-title">Costlier</div>
+                    <div class="card-number">0</div>
+                </div>
+                <div class="summary-card unchanged" onclick="showGoodsDetails(&#39;DEFENCE&#39;, &#39;unchanged&#39;)">
+                    <div class="card-title">Unchanged</div>
+                    <div class="card-number">0</div>
+                </div>
+            </div>
+        </div>
+    </div></div>
+    </div>
+
+    <!-- Modal -->
+    <div id="detailModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" id="modalTitle">TRANSPORTATION SECTOR - Costlier Items</h3>
+                <button class="close-btn" onclick="closeModal()">×</button>
+            </div>
+            <div class="modal-body" id="modalBody">
+                <div class="rate-group">
+                    <div class="rate-header rate-up-header">⬆️ 28% → 40%</div>
+                    <div style="overflow-x: auto;">
+                        <table>
+                            <tbody><tr>
+                                <th>HSN Code</th>
+                                <th>Description of Goods</th>
+                                <th>Previous Rate</th>
+                                <th>New Rate</th>
+                                <th>Impact</th>
+                            </tr>
+                    <tr>
+                        <td><span class="code-pill">8703</span></td>
+                        <td class="desc-cell"><span>🚗</span> <span>Motor cars &amp; vehicles for personal transport (excluding small cars, ambulances, hybrids under earlier category)</span></td>
+                        <td>28%</td>
+                        <td><span class="rate-up">40%</span></td>
+                        <td><span class="impact Costlier">Costlier</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="code-pill">8703 40, 8703 60</span></td>
+                        <td class="desc-cell"><span>🔋</span> <span>Hybrid vehicles (petrol + electric, &gt;1200cc, &gt;4000 mm)</span></td>
+                        <td>28%</td>
+                        <td><span class="rate-up">40%</span></td>
+                        <td><span class="impact Costlier">Costlier</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="code-pill">8703 50, 8703 70</span></td>
+                        <td class="desc-cell"><span>🔋</span> <span>Hybrid vehicles (diesel + electric, &gt;1500cc, &gt;4000 mm)</span></td>
+                        <td>28%</td>
+                        <td><span class="rate-up">40%</span></td>
+                        <td><span class="impact Costlier">Costlier</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="code-pill">8711</span></td>
+                        <td class="desc-cell"><span>🏍️</span> <span>Motorcycles &gt;350cc</span></td>
+                        <td>28%</td>
+                        <td><span class="rate-up">40%</span></td>
+                        <td><span class="impact Costlier">Costlier</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="code-pill">8802 / 8806</span></td>
+                        <td class="desc-cell"><span>🛩️</span> <span>Aircraft (helicopters, aeroplanes) for personal use</span></td>
+                        <td>28%</td>
+                        <td><span class="rate-up">40%</span></td>
+                        <td><span class="impact Costlier">Costlier</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="code-pill">8903</span></td>
+                        <td class="desc-cell"><span>🛥️</span> <span>Yachts &amp; other pleasure/sport vessels</span></td>
+                        <td>28%</td>
+                        <td><span class="rate-up">40%</span></td>
+                        <td><span class="impact Costlier">Costlier</span></td>
+                    </tr></tbody></table></div></div></div>
+        </div>
+    </div>
+
+<script>
+// Complete data from goods HTML
+const goodsData = {
+  "TRANSPORTATION SECTOR": {
+    "28% → 18%": [
+      {"code": "4011", "desc": "New pneumatic tyres of rubber (excluding bicycle/cycle-rickshaw tyres, rear tractor tyres & aircraft tyres)", "from": "28%", "to": "18%", "impact": "Cheaper", "icon": "🛞"},
+      {"code": "8701", "desc": "Road tractors for semi-trailers (engine capacity >1800 cc)", "from": "28%", "to": "18%", "impact": "Cheaper", "icon": "🚛"},
+      {"code": "8702", "desc": "Motor vehicles for transport of 10+ persons (excluding bio-fuel buses)", "from": "28%", "to": "18%", "impact": "Cheaper", "icon": "🚌"},
+      {"code": "8703", "desc": "Petrol, LPG, CNG-driven vehicles (≤1200cc, ≤4000 mm length)", "from": "28%", "to": "18%", "impact": "Cheaper", "icon": "🚗"},
+      {"code": "8703", "desc": "Diesel-driven vehicles (≤1500cc, ≤4000 mm length)", "from": "28%", "to": "18%", "impact": "Cheaper", "icon": "🚗"},
+      {"code": "8702 / 8703", "desc": "Ambulances fitted with all accessories, from factory", "from": "28%", "to": "18%", "impact": "Cheaper", "icon": "🚑"},
+      {"code": "8703", "desc": "Three-wheeled vehicles", "from": "28%", "to": "18%", "impact": "Cheaper", "icon": "🛺"},
+      {"code": "8703 40, 8703 60", "desc": "Hybrid vehicles (petrol + electric, ≤1200cc, ≤4000 mm)", "from": "28%", "to": "18%", "impact": "Cheaper", "icon": "🔋"},
+      {"code": "8703 50, 8703 70", "desc": "Hybrid vehicles (diesel + electric, ≤1500cc, ≤4000 mm)", "from": "28%", "to": "18%", "impact": "Cheaper", "icon": "🔋"},
+      {"code": "8704", "desc": "Motor vehicles for transport of goods (excluding refrigerated vehicles)", "from": "28%", "to": "18%", "impact": "Cheaper", "icon": "🚚"},
+      {"code": "8706", "desc": "Chassis fitted with engines (vehicles under 8701--8705)", "from": "28%", "to": "18%", "impact": "Cheaper", "icon": "🔧"},
+      {"code": "8707", "desc": "Bodies (including cabs) for vehicles under 8701--8705", "from": "28%", "to": "18%", "impact": "Cheaper", "icon": "🚗"},
+      {"code": "8708", "desc": "Parts & accessories of vehicles (8701--8705, excluding tractors)", "from": "28%", "to": "18%", "impact": "Cheaper", "icon": "🔧"},
+      {"code": "8711", "desc": "Motorcycles ≤350cc (including mopeds, auxiliary motor cycles, sidecars)", "from": "28%", "to": "18%", "impact": "Cheaper", "icon": "🛵"},
+      {"code": "8714", "desc": "Parts & accessories of motorcycles (8711)", "from": "28%", "to": "18%", "impact": "Cheaper", "icon": "⚙️"},
+      {"code": "8903", "desc": "Rowing boats, canoes", "from": "28%", "to": "18%", "impact": "Cheaper", "icon": "🚣"},
+      {"code": "9401 20 00", "desc": "Seats of a kind used in motor vehicles", "from": "28%", "to": "18%", "impact": "Cheaper", "icon": "💺"}
+    ],
+    "28% → 40%": [
+      {"code": "8703", "desc": "Motor cars & vehicles for personal transport (excluding small cars, ambulances, hybrids under earlier category)", "from": "28%", "to": "40%", "impact": "Costlier", "icon": "🚗"},
+      {"code": "8703 40, 8703 60", "desc": "Hybrid vehicles (petrol + electric, >1200cc, >4000 mm)", "from": "28%", "to": "40%", "impact": "Costlier", "icon": "🔋"},
+      {"code": "8703 50, 8703 70", "desc": "Hybrid vehicles (diesel + electric, >1500cc, >4000 mm)", "from": "28%", "to": "40%", "impact": "Costlier", "icon": "🔋"},
+      {"code": "8711", "desc": "Motorcycles >350cc", "from": "28%", "to": "40%", "impact": "Costlier", "icon": "🏍️"},
+      {"code": "8802 / 8806", "desc": "Aircraft (helicopters, aeroplanes) for personal use", "from": "28%", "to": "40%", "impact": "Costlier", "icon": "🛩️"},
+      {"code": "8903", "desc": "Yachts & other pleasure/sport vessels", "from": "28%", "to": "40%", "impact": "Costlier", "icon": "🛥️"}
+    ]
+  },
+  "TEXTILE SECTOR": {
+    "12% → 5%": [
+      {"code": "5401, 5508, 5509, 5510, 5511", "desc": "Sewing thread of manmade filaments, whether or not put up for retail sale or manmade staple fibres or yarn", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🧵"},
+      {"code": "5402, 5403, 5404, 5405, 5406", "desc": "Synthetic or artificial filament yarns", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🧶"},
+      {"code": "5601", "desc": "Wadding of textile materials and articles thereof, such as absorbent cotton wool (except cigarette filter rods)", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🤍"},
+      {"code": "5602", "desc": "Felt, whether or not impregnated, coated, covered, or laminated", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🔘"},
+      {"code": "5603", "desc": "Nonwovens, whether or not impregnated, coated, covered, or laminated", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🔹"},
+      {"code": "5604", "desc": "Rubber thread and cord, textile-covered", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🔗"},
+      {"code": "5605", "desc": "Metallised yarn (not real zari or imitation zari)", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "✨"},
+      {"code": "5606", "desc": "Gimped yarn, chenille yarn, loop wale-yarn", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🪢"},
+      {"code": "5607", "desc": "Twine, cordage, ropes, cables (excluding jute twine)", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🪢"},
+      {"code": "5609", "desc": "Articles of yarn, strip, twine, cordage, rope, or cables", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🔗"},
+      {"code": "5702", "desc": "Carpets and floor coverings, woven (including hand-woven rugs), tufted or of felt", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🪔"},
+      {"code": "5705", "desc": "Mats, mattings, and rugs of cotton (handloom)", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🔲"},
+      {"code": "5802 – 5809", "desc": "Terry towelling, gauze, decorative fabrics like lace, hand-woven tapestries, labels, badges, and fabrics made with metal thread or metallized yarn", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🏷️"},
+      {"code": "5810, 5811", "desc": "Embroidered & Quilted textile products", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🪡"},
+      {"code": "5901 – 5911", "desc": "Various textile fabrics such as coated, impregnated, rubberized, or laminated materials, including fabrics for tyres, wall coverings, technical uses", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🔧"},
+      {"code": "6501, 6505", "desc": "Textile caps, Hats (knitted/crocheted) or made up from lace or other textile fabrics", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🧢"},
+      {"code": "9404", "desc": "Products wholly made of quilted textile material (value ≤ ₹2500 per piece)", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🛏️"}
+    ],
+    "18% → 5%": [
+      {"code": "5402, 5404, 5406, 5403, 5405, 5406", "desc": "All goods other than synthetic and Artificial filament yarns", "from": "18%", "to": "5%", "impact": "Cheaper", "icon": "🧶"},
+      {"code": "5503, 5504, 5506, 5507", "desc": "Synthetic or artificial tow and staple fibres", "from": "18%", "to": "5%", "impact": "Cheaper", "icon": "🔹"},
+      {"code": "5505", "desc": "Waste of manmade fibres", "from": "18%", "to": "5%", "impact": "Cheaper", "icon": "♻️"}
+    ],
+    "12% → 18%": [
+      {"code": "61, 62, 63, 9404", "desc": "Articles of apparel and clothing accessories, knitted or not or crocheted, Other made-up textile articles, Cotton quilts with sale value > ₹2500 per piece", "from": "12%", "to": "18%", "impact": "Costlier", "icon": "👔"}
+    ],
+    "5% → 5%": [
+      {"code": "61", "desc": "Articles of apparel and clothing accessories, knitted or crocheted, of sale value not exceeding Rs. 2500 per piece", "from": "5%", "to": "5%", "impact": "Unchanged", "icon": "👔"},
+      {"code": "62", "desc": "Articles of apparel and clothing accessories, not knitted or crocheted, of sale value not exceeding Rs. 2500 per piece", "from": "5%", "to": "5%", "impact": "Unchanged", "icon": "👔"},
+      {"code": "63 (other than 63053200, 63053300, 6309)", "desc": "Other made up textile articles, sets of sale value not exceeding Rs. 2500 per piece", "from": "5%", "to": "5%", "impact": "Unchanged", "icon": "🧵"},
+      {"code": "9404", "desc": "Cotton quilts of sale value not exceeding Rs. 2500 per piece", "from": "5%", "to": "5%", "impact": "Unchanged", "icon": "🛏️"}
+    ]
+  },
+  "FERTILIZER SECTOR": {
+    "18% → 5%": [
+      {"code": "2807", "desc": "Sulphuric acid", "from": "18%", "to": "5%", "impact": "Cheaper", "icon": "⚗️"},
+      {"code": "2808", "desc": "Nitric acid", "from": "18%", "to": "5%", "impact": "Cheaper", "icon": "⚗️"},
+      {"code": "2814", "desc": "Ammonia", "from": "18%", "to": "5%", "impact": "Cheaper", "icon": "⚗️"},
+      {"code": "4011", "desc": "Rear tractor tyres & rear tractor tyre tubes", "from": "18%", "to": "5%", "impact": "Cheaper", "icon": "🛞"},
+      {"code": "4011 70 00", "desc": "Tyres for tractors", "from": "18%", "to": "5%", "impact": "Cheaper", "icon": "🛞"},
+      {"code": "4013 90 49", "desc": "Tubes for tractor tyres", "from": "18%", "to": "5%", "impact": "Cheaper", "icon": "🔧"},
+      {"code": "8408 20 20", "desc": "Agricultural diesel engine (cylinder capacity >250cc, for tractors)", "from": "18%", "to": "5%", "impact": "Cheaper", "icon": "🚜"},
+      {"code": "8413 81 90", "desc": "Hydraulic pumps for tractors", "from": "18%", "to": "5%", "impact": "Cheaper", "icon": "🔧"},
+      {"code": "8708", "desc": "Tractor parts: rear wheel rim, centre housing, transmission housing, support front axle", "from": "18%", "to": "5%", "impact": "Cheaper", "icon": "🔧"},
+      {"code": "8708 10 10", "desc": "Tractor bumpers & parts", "from": "18%", "to": "5%", "impact": "Cheaper", "icon": "🛡️"},
+      {"code": "8708 30 00", "desc": "Brakes assembly & parts for tractors", "from": "18%", "to": "5%", "impact": "Cheaper", "icon": "🛠️"},
+      {"code": "8708 40 00", "desc": "Gear boxes & parts for tractors", "from": "18%", "to": "5%", "impact": "Cheaper", "icon": "⚙️"},
+      {"code": "8708 50 00", "desc": "Transaxles & parts for tractors", "from": "18%", "to": "5%", "impact": "Cheaper", "icon": "🔧"},
+      {"code": "8708 70 00", "desc": "Road wheels & parts for tractors", "from": "18%", "to": "5%", "impact": "Cheaper", "icon": "🛞"},
+      {"code": "8708 91 00", "desc": "Radiator & cooling system for tractors", "from": "18%", "to": "5%", "impact": "Cheaper", "icon": "🌡️"},
+      {"code": "8708 92 00", "desc": "Silencer assembly for tractors", "from": "18%", "to": "5%", "impact": "Cheaper", "icon": "🔇"},
+      {"code": "8708 93 00", "desc": "Clutch assembly for tractors", "from": "18%", "to": "5%", "impact": "Cheaper", "icon": "⚙️"},
+      {"code": "8708 94 00", "desc": "Steering wheels & parts for tractors", "from": "18%", "to": "5%", "impact": "Cheaper", "icon": "🚗"},
+      {"code": "8708 99 00", "desc": "Hydraulic parts, fender, hood, grill, fuel tank & other tractor body parts", "from": "18%", "to": "5%", "impact": "Cheaper", "icon": "🚜"}
+    ],
+    "12% → 5%": [
+      {"code": "29 / 380893", "desc": "Gibberellic acid", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🧪"},
+      {"code": "3808", "desc": "Bio-pesticides: Bacillus (various strains), Trichoderma, Pseudomonas, Beauveria, NPV (Helicoverpa & Spodoptera), Neem-based, Cymbopogan", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🌱"},
+      {"code": "28 / 38", "desc": "Micronutrients (as per Fertilizer Control Order, 1985) by registered manufacturers", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "💎"}
+    ]
+  },
+  "HANDICRAFTS SECTOR": {
+    "12% → 5%": [
+      {"code": "44, 68, 83", "desc": "Idols of wood, stone (including marble), and metals (other than precious metals)", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🗿"},
+      {"code": "6802, 6913", "desc": "Statues, statuettes, high/low reliefs, animal figures, bowls, vases, ashtrays, etc. (mainly stone) and other ornamental articles", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🏺"},
+      {"code": "9601", "desc": "Worked ivory, bone, tortoise shell, horn, antlers, mother of pearl, and coral carving materials and articles", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🐚"},
+      {"code": "9701, 9702, 9703", "desc": "Hand paintings, drawings, pastels (e.g., Mysore, Rajasthan, Tanjore), Original engravings, prints, lithographs, Original sculptures and statuary (in any material)", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🎨"},
+      {"code": "9705, 9706", "desc": "Collections and collectors' items of zoological, botanical, historical, archaeological interest (other than numismatic coins), Antiques over 100 years old", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🏛️"},
+      {"code": "3406, 4202 22, 4202 29, 4202 31 10,<br>4202 31 90, 4202 32, 4202 39", "desc": "Handcrafted candles, Handbags, pouches, purses, jewellery boxes", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🕯️"},
+      {"code": "4416, 4421 99 90", "desc": "Carved wood products, art ware, decorative wooden articles (including inlay work, casks, barrels, vats)", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🪵"},
+      {"code": "4414, 7009 92 00", "desc": "Wooden frames for paintings, photographs, mirrors, Ornamental framed mirrors", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🖼️"},
+      {"code": "4420", "desc": "Statuettes & other ornamental wood articles (including lathe and lacquer work, ambadi sisal craft)", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🎭"},
+      {"code": "4503 90 90, 4504 90", "desc": "Art ware of cork, including articles of sholapith", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🍾"},
+      {"code": "6117, 6214", "desc": "Handmade/hand embroidered shawls (sale value >₹2500)", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🧣"},
+      {"code": "6802, 68159990", "desc": "Carved stone products (statues, animal figures, ashtrays, etc.), Stone art ware, stone inlay work", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🗿"},
+      {"code": "691200 10, 6912 00 20, 6913 90 00", "desc": "Clay, terracotta tableware & kitchenware, Statuettes & other ornamental ceramic articles (including blue pottery)", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🏺"},
+      {"code": "7018 90 10, 7020 00 90", "desc": "Glass statues (other than crystal), Glass art ware (pots, jars, votives, vases, etc.)", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🔮"},
+      {"code": "7326 90 99, 7419 80, 7616 99 90", "desc": "Art ware of iron, brass, copper, electroplated with nickel/silver, Aluminium", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "⚱️"},
+      {"code": "8306", "desc": "Bells, gongs, non-electric statuettes, metal ornaments, mirrors (including Bidriware, Swamimalai bronze icons, Dhokra art)", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🔔"},
+      {"code": "940510", "desc": "Handcrafted lamps (including Panchloga lamp)", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🪔"},
+      {"code": "940150, 9403 80", "desc": "Furniture of bamboo, rattan, cane", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🪑"},
+      {"code": "9503, 9504", "desc": "Traditional wooden, metal, and textile dolls and toys (such as Sawantwadi, Channapatna toys, and Thanjavur dolls), as well as Ganjifa cards", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🪆"},
+      {"code": "9601 – 9602", "desc": "Worked materials such as ivory, bone, tortoise shell, horn, antlers, coral, mother of pearl, seashell, as well as vegetable or mineral carving materials", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🐚"},
+      {"code": "9701, 9703", "desc": "Hand-painted artworks (such as Mysore, Rajasthan, Tanjore, and Palm leaf paintings) and original sculptures and statuary made from metal, stone, or other materials", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🎨"}
+    ]
+  },
+  "HEALTH SECTOR": {
+    "5% → Nil": [
+      {"code": "30", "desc": "Agalsidase Beta, Imiglucerase, Eptacog alfa (activated recombinant coagulation factor VIIa)", "from": "5%", "to": "Nil", "impact": "Cheaper", "icon": "💊"}
+    ],
+    "12% → Nil": [
+      {"code": "30", "desc": "Onasemnogene abeparvovec, Asciminib, Mepolizumab, Pegylated Liposomal Irinotecan, Daratumumab, Daratumumab subcutaneous, Teclistamab, Amivantamab, Alectinib, Risdiplam, Obinutuzumab, Polatuzumab vedotin, Entrectinib, Atezolizumab, Spesolimab, Velaglucerase Alpha, Agalsidase Alfa, Rurioctocog Alpha Pegol, Idursulphatase, Alglucosidase Alfa, Laronidase, Olipudase Alfa, Tepotinib, Avelumab, Emicizumab, Belumosudil, Miglustat, Velmanase Alfa, Alirocumab, Evolocumab, Cystamine Bitartrate, C1-Inhibitor injection, Inclisiran", "from": "12%", "to": "Nil", "impact": "Cheaper", "icon": "🧬"}
+    ],
+    "12% → 5%": [
+      {"code": "28", "desc": "Anaesthetics, Potassium Iodate, Steam", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "💉"},
+      {"code": "2801 20", "desc": "Iodine", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🧪"},
+      {"code": "2804 40 10", "desc": "Medical grade oxygen", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🫁"},
+      {"code": "2847", "desc": "Medicinal grade hydrogen peroxide", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🧪"},
+      {"code": "30", "desc": "Drugs and medicines (Fluticasone Furoate + Umeclidinium + Vilanterol, Brentuximab Vedotin, Ocrelizumab, Pertuzumab, etc.)", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "💊"},
+      {"code": "3001", "desc": "Glands and other organs for organo-therapeutic uses", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🫀"},
+      {"code": "3002", "desc": "Animal blood for therapeutic uses", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🩸"},
+      {"code": "3003", "desc": "Medicaments (mixed or unmixed for therapeutic uses, Ayurvedic, Unani, Siddha, homoeopathic)", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "💊"},
+      {"code": "3004", "desc": "Medicaments put up in measured doses (including transdermal systems)", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "💊"},
+      {"code": "3005", "desc": "Wadding, gauze, bandages, and similar articles (impregnated with pharmaceutical substances)", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🩹"},
+      {"code": "3006", "desc": "Sterile surgical materials, including catgut, sterile suture materials, haemostatics", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🧵"},
+      {"code": "3822", "desc": "Diagnostic kits and reagents", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🧪"},
+      {"code": "4015", "desc": "Surgical rubber gloves or medical examination rubber gloves", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🧤"},
+      {"code": "90", "desc": "Blood glucose monitoring system (Glucometer) and test strips", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "📱"},
+      {"code": "90", "desc": "Patent Ductus Arteriosus / Atrial Septal Defect occlusion device", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "❤️"},
+      {"code": "9004", "desc": "Spectacles, corrective (including goggles for vision correction)", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "👓"},
+      {"code": "9018", "desc": "Medical, surgical, dental, or veterinary instruments and appliances", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🔬"},
+      {"code": "9019", "desc": "Mechano-therapy appliances; massage, psychological testing, oxygen therapy apparatus", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🏥"},
+      {"code": "9020", "desc": "Breathing appliances and gas masks", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "😷"},
+      {"code": "9022", "desc": "Apparatus based on X-rays, radiotherapy apparatus", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "☢️"},
+      {"code": "9804", "desc": "Other drugs and medicines intended for personal use", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "💊"}
+    ],
+    "18% → 5%": [
+      {"code": "9025", "desc": "Thermometers for medical, surgical, dental, or veterinary use", "from": "18%", "to": "5%", "impact": "Cheaper", "icon": "🌡️"},
+      {"code": "9027", "desc": "Instruments and apparatus for medical, surgical, dental, or veterinary uses for physical or chemical analysis", "from": "18%", "to": "5%", "impact": "Cheaper", "icon": "🔬"}
+    ]
+  },
+  "MISCELLANEOUS ITEMS": {
+    "12% → 5%": [
+      {"code": "01012100, 010129,<br>2515 12 10, 2516,<br>29061110", "desc": "Live horses, marble and travertine blocks, granite blocks, and natural menthol", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🎠"},
+      {"code": "29061110, 30, 3301", "desc": "Menthol, Peppermint, Mentha oil, Spearmint oil, etc.", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🌿"},
+      {"code": "3701, 3705, 3706", "desc": "Photographic plates and films for medical use (X-ray), as well as exposed and developed photographic plates and films used in media", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "📸"},
+      {"code": "3818, 3926, 4007, 4016", "desc": "Silicon wafers, Plastic beads, Latex Rubber Thread, Rubber bands", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🔬"},
+      {"code": "6602, 6909", "desc": "Whips, riding-crops, and the like, Pots, jars, ceramic goods for packing", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🏺"},
+      {"code": "7015 10", "desc": "Glasses for corrective spectacles, flint buttons", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "👓"},
+      {"code": "7020", "desc": "Globes for lamps & lanterns, Founts for kerosene wick lamps, Glass chimneys", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "💡"},
+      {"code": "7310, 7323, 7612, 7615, 7317", "desc": "Milk cans (Iron, Steel, Aluminium), Animal shoe nails", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🥛"},
+      {"code": "8306", "desc": "Bells, gongs, metal statuettes, frames, mirrors, base metal ornaments", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🔔"},
+      {"code": "8420", "desc": "Hand operated rubber roller", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🛠️"},
+      {"code": "9001, 9003", "desc": "Contact lenses; Spectacle lenses, Frames and mountings for spectacles, goggles, and parts", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "👓"},
+      {"code": "9404", "desc": "Coir products (except coir mattresses)", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🥥"},
+      {"code": "9607", "desc": "Slide fasteners and parts", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🤐"}
+    ],
+    "12% → 18%": [
+      {"code": "29061190", "desc": "Other than natural menthol", "from": "12%", "to": "18%", "impact": "Costlier", "icon": "⚗️"},
+      {"code": "29061190, 30, 3301", "desc": "Non-natural menthol goods (Menthol, Peppermint, Mentha oil, etc.)", "from": "12%", "to": "18%", "impact": "Costlier", "icon": "🧪"},
+      {"code": "33074100", "desc": "Odoriferous preparations (other than agarbattis, lobhan, dhoop)", "from": "12%", "to": "18%", "impact": "Costlier", "icon": "🌸"},
+      {"code": "3826", "desc": "Biodiesel (excluding biodiesel for oil marketing companies)", "from": "12%", "to": "18%", "impact": "Costlier", "icon": "⛽"}
+    ],
+    "28% → 40%": [
+      {"code": "9302", "desc": "Revolvers and pistols (excluding those under 9303 or 9304)", "from": "28%", "to": "40%", "impact": "Costlier", "icon": "🔫"},
+      {"code": "9614", "desc": "Smoking pipes, cigar/cigarette holders, and parts", "from": "28%", "to": "40%", "impact": "Costlier", "icon": "🚬"}
+    ]
+  },
+  "TOBACCO": {
+    "18% → 5%": [
+      {"code": "1404 90 10", "desc": "Bidi wrapper leaves (tendu)", "from": "18%", "to": "5%", "impact": "Cheaper", "icon": "🌿"},
+      {"code": "1404 90 50", "desc": "Indian katha", "from": "18%", "to": "5%", "impact": "Cheaper", "icon": "🟤"}
+    ],
+    "28% → 40%": [
+      {"code": "2401", "desc": "Unmanufactured tobacco; tobacco refuse [other than tobacco leaves]", "from": "28%", "to": "40%", "impact": "Costlier", "icon": "🍂"},
+      {"code": "2402", "desc": "Cigars, cheroots, cigarillos and cigarettes, of tobacco or substitutes", "from": "28%", "to": "40%", "impact": "Costlier", "icon": "🚬"},
+      {"code": "2403", "desc": "Other manufactured tobacco and substitutes; homogenised/reconstituted etc.", "from": "28%", "to": "40%", "impact": "Costlier", "icon": "🏭"},
+      {"code": "2404 11 00", "desc": "Products containing tobacco or reconstituted tobacco for inhalation", "from": "28%", "to": "40%", "impact": "Costlier", "icon": "💨"},
+      {"code": "2404 19 00", "desc": "Products containing tobacco/nicotine substitutes for inhalation", "from": "28%", "to": "40%", "impact": "Costlier", "icon": "⚗️"}
+    ]
+  },
+  "FOOD SECTOR": {
+    "5% → Nil": [
+      {"code": "0401", "desc": "Ultra -High Temperature (UHT) milk", "from": "5%", "to": "Nil", "impact": "Cheaper", "icon": "🥛"},
+      {"code": "0406", "desc": "Chena or paneer, pre -packaged and labelled", "from": "5%", "to": "Nil", "impact": "Cheaper", "icon": "🧀"},
+      {"code": "1905", "desc": "Pizza bread", "from": "5%", "to": "Nil", "impact": "Cheaper", "icon": "🍕"},
+      {"code": "1905", "desc": "or 2106 Khakhra , plain chapathi or roti", "from": "5%", "to": "Nil", "impact": "Cheaper", "icon": "🫓"}
+    ],
+    "18% → Nil": [
+      {"code": "2106", "desc": "Paratha, parotta and other Indian breads by any name called", "from": "18%", "to": "Nil", "impact": "Cheaper", "icon": "🥟"}
+    ],
+    "12% → 5%": [
+      {"code": "0402", "desc": "91 10, 0402 99 20 Condensed milk", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🍼"},
+      {"code": "0405", "desc": "Butter and other fats (i.e. ghee, butter oil, etc.) and oils derived from milk; dairy spreads", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🧈"},
+      {"code": "0406", "desc": "Cheese", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🧀"},
+      {"code": "0801", "desc": "Brazil nuts, dried, whether or not Shelled or Peeled", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🥜"},
+      {"code": "0802", "desc": "Other nuts, dried, whether or not shelled or peeled, such as Almonds, Hazelnuts or filberts (Corylus spp.), Chestnuts (Castanea spp.), Pistachos, Macadamia nuts, Kola nuts (Cola spp.), Pine nuts [other than dried areca nuts]", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🥜"},
+      {"code": "0804", "desc": "Dates (soft or hard), figs, pineapples, avocados, guavas, mangoes (other than mangoes sliced, dried) and mangosteens, dried", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🫐"},
+      {"code": "0805", "desc": "Citrus fruit, such as Oranges, Mandarins (including tangerines and satsumas); clementines, wilkings and similar citrus hybrids, Grapefruit, including pomelos, Lemons (Citrus limon, Citrus limonum) and limes (Citrus aurantifolia, Citrus latifolia), dried 2 Sub-heading / Tariff item Description of Goods", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🍊"},
+      {"code": "0813", "desc": "Fruit, dried, other than that of headings 0801 to 0806; mixtures of nuts or dried fruits of Chapter 8 [other than dried tamarind and dried chestnut (singhada) whether or not shelled or peeled]", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🍇"},
+      {"code": "1108", "desc": "Starches; inulin", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🌾"},
+      {"code": "1501", "desc": "Pig fats (including lard) and poultry fat, other than that of heading 0209 or 1503", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🐷"},
+      {"code": "1502", "desc": "Fats of bovine animals, sheep or goats, other than those of heading 1503", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🐄"},
+      {"code": "1503", "desc": "Lard stearin, lard oil, oleo stearin, oleo -oil and tallow oil, not emulsified or mixed or otherwise prepared", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🥩"},
+      {"code": "1504", "desc": "Fats and oils and their fractions, of fish or marine mammals, whether or not refined, but not chemically modified", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🐟"},
+      {"code": "1505", "desc": "Wool grease and fatty substances derived therefrom (including lanolin)", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🐑"},
+      {"code": "1506", "desc": "Other animal fats and oils and their fractions, whether or not refined, but not chemically modified", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🦆"},
+      {"code": "1516", "desc": "Animal or microbial fats and animal or microbial oils and their fractions, partly or wholly hydrogenated, inter - esterified, re -esterified or elaidinised, whether or not refined, but not further prepared", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🧪"},
+      {"code": "1517", "desc": "Edible mixtures or preparations of animal fats or microbial fats or animal oils or microbial oils or of fractions of different animal fats or microbial fats or animal oils or microbial oils of this Chapter, other than edible fats or oils or thei r fractions of heading 1516", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🍽️"},
+      {"code": "1518", "desc": "Animal or microbial fats and animal or microbial oils and their fractions, boiled, oxidised, dehydrated, sulphurised, blown, polymerised by heat in vacuum or in inert gas or otherwise chemically modified, excluding those of heading 1516; inedible mixtures or preparations of animal, vegetable or microbial fats or oils or of fractions of different fats or oils of this chapter, not elsewhere specified of included", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🧬"},
+      {"code": "1601", "desc": "Sausages and similar products, of meat, meat offal, blood or insects; food preparations based on these products", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🌭"},
+      {"code": "1602", "desc": "Other prepared or preserved meat, meat offal, blood or insects", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🥩"},
+      {"code": "1603", "desc": "Extracts and juices of meat, fish or crustaceans, molluscs or other aquatic invertebrates", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🦐"},
+      {"code": "1604", "desc": "Prepared or preserved fish; caviar and caviar substitutes prepared from fish eggs", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🐟"},
+      {"code": "1605", "desc": "Crustaceans, molluscs and other aquatic invertebrates prepared or preserved", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🦀"},
+      {"code": "1701", "desc": "91, 1701 99 All goods, including refined sugar containing added flavouring or colouring matter, sugar cubes (other than those which attract 5% or nil GST)", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🍬"},
+      {"code": "1704", "desc": "Sugar boiled confectionery 3 Sub-heading / Tariff item Description of Goods", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🍭"},
+      {"code": "1902", "desc": "Pasta, whether or not cooked or stuffed (with meat or other substances) or otherwise prepared, such as spaghetti, macaroni, noodles, lasagne, gnocchi, ravioli, cannelloni; couscous, whether or not prepared", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🍝"},
+      {"code": "1905", "desc": "90 30 Extruded or expanded products, savoury or salted (other than un-fried or un -cooked snack pellets, by whatever name called, manufactured through process of extrusion)", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🍿"},
+      {"code": "2001", "desc": "Vegetables, fruit, nuts and other edible parts of plants, prepared or preserved by vinegar or acetic acid", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🥒"},
+      {"code": "2002", "desc": "Tomatoes prepared or preserved otherwise than by vinegar or acetic acid", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🍅"},
+      {"code": "2003", "desc": "Mushrooms and truffles, prepared or preserved otherwise than by vinegar or acetic acid", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🍄"},
+      {"code": "2004", "desc": "Other vegetables prepared or preserved otherwise than by vinegar or acetic acid, frozen, other than products of heading 2006", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🥦"},
+      {"code": "2005", "desc": "Other vegetables prepared or preserved otherwise than by vinegar or acetic acid, not frozen, other than products of heading 2006", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🌽"},
+      {"code": "2006", "desc": "Vegetables, fruit, nuts, fruit -peel and other parts of plants, preserved by sugar (drained, glacé or crystallised)", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🧁"},
+      {"code": "2007", "desc": "Jams, fruit jellies, marmalades, fruit or nut purée and fruit or nut pastes, obtained by cooking, whether or not containing added sugar or other sweetening matter", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🍓"},
+      {"code": "2008", "desc": "Fruit, nuts and other edible parts of plants, otherwise prepared or preserved, whether or not containing added sugar or other sweetening matter or spirit, not elsewhere specified or included; such as Ground -nuts, Cashew nut, roasted, salted or roasted and salted, Other roasted nuts and seeds, squash of Mango, Lemon, Orange, Pineapple or other fruits", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🥭"},
+      {"code": "2009", "desc": "Fruit or nut juices (including grape must) and vegetable juices, unfermented and not containing added spirit, whether or not containing added sugar or other sweetening matter", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🥤"},
+      {"code": "2009", "desc": "89 90 Tender coconut water, pre -packaged and labelled", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🥥"},
+      {"code": "2101", "desc": "30 Roasted chicory and other roasted coffee substitutes, and extracts, essences and concentrates thereof", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "☕"},
+      {"code": "2102", "desc": "Yeasts (active and inactive); other single cell micro -organisms, dead (but not including vaccines of heading 3002); prepared baking powders", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🧂"},
+      {"code": "2103", "desc": "All goods, including Sauces and preparations therefor, mixed condiments and mixed seasonings; mustard flour and meal and prepared mustard, Curry paste, mayonnaise and salad dressings", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🧂"},
+      {"code": "2106", "desc": "Texturised vegetable proteins (soya bari), Bari made of pulses including mungodi and batters 4 Sub-heading / Tariff item Description of Goods", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🥜"},
+      {"code": "2106", "desc": "90 Namkeens, bhujia, mixture, chabena and similar edible preparations ready for consumption form (other than roasted gram), pre -packaged and labelled", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🍿"},
+      {"code": "2106", "desc": "90 91 Diabetic foods", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🩺"},
+      {"code": "2201", "desc": "Drinking water packed in 20 litre bottles", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "💧"},
+      {"code": "2202", "desc": "99 10 Soya milk drinks", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🥤"},
+      {"code": "2202", "desc": "99 20 Fruit pulp or fruit juice based drinks [other than Carbonated Beverages of Fruit Drink or Carbonated Beverages with Fruit Juice]", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🥤"},
+      {"code": "2202", "desc": "99 30 Beverages containing milk", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🥛"}
+    ],
+    "18% → 5%": [
+      {"code": "1107", "desc": "Malt, whether or not roasted", "from": "18%", "to": "5%", "impact": "Cheaper", "icon": "🌾"},
+      {"code": "1302", "desc": "Vegetable saps and extracts; pectic substances, pectinates and pectates; agar -agar and other mucilages and thickeners, whether or not modified, derived from vegetable products [other than tamarind kernel powder]", "from": "18%", "to": "5%", "impact": "Cheaper", "icon": "🌿"},
+      {"code": "1517", "desc": "10 All goods i.e. Margarine, Linoxyn", "from": "18%", "to": "5%", "impact": "Cheaper", "icon": "🧈"},
+      {"code": "1520", "desc": "00 00 Glycerol, crude; glycerol waters and glycerol lyes", "from": "18%", "to": "5%", "impact": "Cheaper", "icon": "🧪"},
+      {"code": "1521", "desc": "Vegetable waxes (other than triglycerides), Beeswax, other insect waxes and spermaceti, whether or not refined or coloured", "from": "18%", "to": "5%", "impact": "Cheaper", "icon": "🐝"},
+      {"code": "1522", "desc": "Degras, residues resulting from the treatment of fatty substances or animal or vegetable waxes", "from": "18%", "to": "5%", "impact": "Cheaper", "icon": "♻️"},
+      {"code": "1702", "desc": "Other sugars, including chemically pure lactose, maltose, glucose and fructose, in solid form; sugar syrups not containing added flavouring or colouring matter; artificial honey, whether or not mixed with natural honey; caramel [other than palmyra sugar an d Palmyra jaggery]", "from": "18%", "to": "5%", "impact": "Cheaper", "icon": "🍯"},
+      {"code": "1704", "desc": "Sugar confectionery [other than mishri, batasha, bura, sakar, khadi sakar, harda, sakariya, gatta, kuliya, elaichidana, lukumdana, chikkis like puffed rice chikki, peanut chikki, sesame chikki, til chikki, til patti, til revdi, sugar makhana, groundnut sweets, gajak and sugar boiled confectionery]", "from": "18%", "to": "5%", "impact": "Cheaper", "icon": "🍬"},
+      {"code": "1804", "desc": "Cocoa butter, fat and oil", "from": "18%", "to": "5%", "impact": "Cheaper", "icon": "🍫"},
+      {"code": "1805", "desc": "Cocoa powder, not containing added sugar or sweetening matter", "from": "18%", "to": "5%", "impact": "Cheaper", "icon": "🍫"},
+      {"code": "1806", "desc": "Chocolates and other food preparations containing cocoa", "from": "18%", "to": "5%", "impact": "Cheaper", "icon": "🍫"},
+      {"code": "1901", "desc": "[other than 1901 20 00] Malt extract, food preparations of flour, groats, meal, starch or malt extract, not containing cocoa or containing less than 40% by weight of cocoa calculated on a totally defatted 5 basis, not elsewhere specified or included; food preparations of goods of heading 0401 to 0404, not containing cocoa or containing less than 5% by weight of cocoa calculated on a totally defatted basis not elsewhere specified or included [other than mixes and doughs for the preparation of bakers' wares of heading 1905; food preparation of millet flour, in powder form, containing at least 70% millets by weight, pre - packaged and labelled]", "from": "18%", "to": "5%", "impact": "Cheaper", "icon": "🌾"},
+      {"code": "1904", "desc": "[other than 1904 10 20] All goods i.e. Corn flakes, bulgar wheat, prepared foods obtained from cereal flakes [other than Puffed rice, commonly known as Muri, flattened or beaten rice, commonly known as Chira, parched rice, commonly known as khoi, parched paddy or rice coated with sugar or gur, commonly known as Murki, Fortified Rice Kernel (FRK)]", "from": "18%", "to": "5%", "impact": "Cheaper", "icon": "🥣"},
+      {"code": "1905", "desc": "Pastry, cakes, biscuits and other bakers' wares, whether or not containing cocoa; communion wafers, empty cachets of a kind suitable for pharmaceutical use, sealing wafers, rice paper and similar products [other than pizza bread, khakhra, plain chapatti or roti, bread, toasted bread and similar toasted products, un -fried or un -cooked snack pellets, by whatever name called, manufactured through process of extrusion, extruded or expanded products, savoury or slated]", "from": "18%", "to": "5%", "impact": "Cheaper", "icon": "🍰"},
+      {"code": "2101", "desc": "11, 2101 12 00 Extracts, essences and concentrates of coffee, and preparations with a basis of these extracts, essences or concentrates or with a basis of coffee", "from": "18%", "to": "5%", "impact": "Cheaper", "icon": "☕"},
+      {"code": "2101", "desc": "20 All goods i.e Extracts, essences and concentrates of tea or mate, and preparations with a basis of these extracts, essences or concentrates or with a basis of tea or mate", "from": "18%", "to": "5%", "impact": "Cheaper", "icon": "🍵"},
+      {"code": "2104", "desc": "Soups and broths and preparations therefor; homogenised composite food preparations", "from": "18%", "to": "5%", "impact": "Cheaper", "icon": "🥣"},
+      {"code": "2105", "desc": "00 00 Ice cream and other edible ice, whether or not containing cocoa", "from": "18%", "to": "5%", "impact": "Cheaper", "icon": "🍦"},
+      {"code": "2106", "desc": "Food preparations not elsewhere specified or included [other than roasted gram, sweetmeats, batters including idli/dosa batter, namkeens, bhujia, mixture, chabena and similar edible preparations in ready for consumption form, khakhra, chutney powder, diabe tic foods]", "from": "18%", "to": "5%", "impact": "Cheaper", "icon": "🛍"},
+      {"code": "2201", "desc": "Waters, including natural or artificial mineral waters and aerated waters, not containing added sugar or other sweetening matter nor flavoured", "from": "18%", "to": "5%", "impact": "Cheaper", "icon": "💧"},
+      {"code": "2202", "desc": "99 Plant -based milk drinks, ready for direct consumption as beverages", "from": "18%", "to": "5%", "impact": "Cheaper", "icon": "🌱"},
+      {"code": "3503", "desc": "Gelatin (including gelatin in rectangular (including square) sheets, whether or not surface -worked or coloured) and gelatin derivatives; isinglass; other glues of animal origin, excluding casein glues of heading 3501", "from": "18%", "to": "5%", "impact": "Cheaper", "icon": "🧬"},
+      {"code": "3505", "desc": "Dextrins and other modified starches (for example, pregelatinised or esterified starches); glues based on starches, or on dextrins or other modified starches 6", "from": "18%", "to": "5%", "impact": "Cheaper", "icon": "🌾"}
+    ],
+    "18% → 40%": [
+      {"code": "2202", "desc": "91 00, 2202 99 Other non -alcoholic beverages", "from": "18%", "to": "40%", "impact": "Costlier", "icon": "🥤"}
+    ],
+    "28% → 40%": [
+      {"code": "2106", "desc": "90 20 Pan masala", "from": "28%", "to": "40%", "impact": "Costlier", "icon": "🌿"},
+      {"code": "2202", "desc": "10 All goods [including aerated waters], containing added sugar or other sweetening matter or flavoured", "from": "28%", "to": "40%", "impact": "Costlier", "icon": "🥤"},
+      {"code": "2202", "desc": "99 90 Caffeinated Beverages", "from": "28%", "to": "40%", "impact": "Costlier", "icon": "☕"},
+      {"code": "2202", "desc": "Carbonated Beverages of Fruit Drink or Carbonated Beverages with Fruit Juice", "from": "28%", "to": "40%", "impact": "Costlier", "icon": "🥤"}
+    ]
+  },
+  "AGRICULTURE": {
+    "12% → 5%": [
+      {"code": "8408", "desc": "Fixed Speed Diesel Engines ≤ 15HP", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🔧"},
+      {"code": "8414 20 20", "desc": "Hand pumps", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🚰"},
+      {"code": "8424", "desc": "Nozzles for drip irrigation, sprinklers", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "💧"},
+      {"code": "8424", "desc": "Drip irrigation systems, mechanical sprayers", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🌱"},
+      {"code": "8432", "desc": "Soil preparation/cultivation machinery, rollers & parts", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🛠️"},
+      {"code": "8433", "desc": "Harvesting & threshing machinery, balers, mowers", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🚜"},
+      {"code": "8436", "desc": "Poultry, bee-keeping, germination plant equipment", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🐝"},
+      {"code": "8479", "desc": "Composting machines", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "♻️"},
+      {"code": "8701", "desc": "Tractors (except large road tractors >1800cc)", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🚜"},
+      {"code": "8716 20 00", "desc": "Self-loading/unloading trailers (agriculture)", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🚛"},
+      {"code": "8716 80", "desc": "Hand-propelled/animal drawn vehicles", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🐂"}
+    ]
+  },
+  "COAL": {
+    "5% → 18%": [
+      {"code": "2701", "desc": "Coal; briquettes, ovoids, and similar solid fuels manufactured from coal", "from": "5%", "to": "18%", "impact": "Costlier", "icon": "⛏️"},
+      {"code": "2702", "desc": "Lignite, whether or not agglomerated (excluding jet)", "from": "5%", "to": "18%", "impact": "Costlier", "icon": "🪨"},
+      {"code": "2703", "desc": "Peat (including peat litter), whether or not agglomerated", "from": "5%", "to": "18%", "impact": "Costlier", "icon": "🪵"}
+    ]
+  },
+  "RENEWABLE ENERGY": {
+    "12% → 5%": [
+      {"code": "7321 / 8516", "desc": "Solar cookers", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "☀️"},
+      {"code": "8419 12", "desc": "Solar water heater and system", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "♨️"},
+      {"code": "84, 85, 94", "desc": "Renewable energy devices & parts for manufacture (biogas, SPV devices/generators, wind mills/WOEG, waste-to-energy, solar lanterns, ocean/tidal wave energy, PV cells/panels/modules)", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🔋"},
+      {"code": "87", "desc": "Fuel Cell Motor Vehicles incl. hydrogen-based, length ≤ 4000mm", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🚗"}
+    ]
+  },
+  "EDUCATION": {
+    "5% → Nil": [
+      {"code": "4016", "desc": "Erasers", "from": "5%", "to": "Nil", "impact": "Cheaper", "icon": "📚"}
+    ],
+    "12% → Nil": [
+      {"code": "4905", "desc": "Maps, atlases, wall maps, globes, printed", "from": "12%", "to": "Nil", "impact": "Cheaper", "icon": "🗺️"},
+      {"code": "8214", "desc": "Pencil sharpeners", "from": "12%", "to": "Nil", "impact": "Cheaper", "icon": "✏️"},
+      {"code": "9608, 9609", "desc": "Pencils, crayons, pastels, charcoals, tailor's chalk", "from": "12%", "to": "Nil", "impact": "Cheaper", "icon": "🖍️"},
+      {"code": "4820", "desc": "Exercise books, graph books, lab note books & notebooks", "from": "12%", "to": "Nil", "impact": "Cheaper", "icon": "📓"}
+    ],
+    "12% → 5%": [
+      {"code": "7310 / 7326", "desc": "Mathematical boxes, geometry boxes, colour boxes", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "📐"}
+    ]
+  },
+  "COMMON MAN ITEMS": {
+    "12% → 5%": [
+      {"code": "33061010", "desc": "Tooth powder", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🦷"},
+      {"code": "3406", "desc": "Candles, tapers", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🕯️"},
+      {"code": "3605 00 10", "desc": "Safety matches", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🧨"},
+      {"code": "3926", "desc": "Feeding bottles", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🍼"},
+      {"code": "4014", "desc": "Nipples for feeding bottles", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🍼"},
+      {"code": "4202 22 20", "desc": "Cotton handbags & shopping bags", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "👜"},
+      {"code": "4202 22 30", "desc": "Jute handbags & shopping bags", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "👜"},
+      {"code": "4419", "desc": "Wooden tableware & kitchenware", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🍽️"},
+      {"code": "6601", "desc": "Umbrellas, sun/garden umbrellas", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "☂️"},
+      {"code": "6603", "desc": "Umbrella parts & accessories", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🧰"},
+      {"code": "6911", "desc": "Porcelain/china tableware, kitchenware & toilet articles", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🍽️"},
+      {"code": "6912", "desc": "Other tableware, kitchenware & toilet articles", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🍽️"},
+      {"code": "7319", "desc": "Sewing needles", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🧵"},
+      {"code": "7321", "desc": "Kerosene burners, stoves, wood-burning stoves", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🔥"},
+      {"code": "7323", "desc": "Steel tableware, utensils", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🍽️"},
+      {"code": "7418", "desc": "Copper tableware, utensils", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🍽️"},
+      {"code": "7419 80 30", "desc": "Brass kerosene pressure stove", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🔥"},
+      {"code": "7615", "desc": "Aluminium tableware, utensils", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🍽️"},
+      {"code": "8452", "desc": "Sewing machines & parts, furniture, covers, needles", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🧵"},
+      {"code": "8712", "desc": "Bicycles & delivery tricycles (non-motorised)", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🚲"},
+      {"code": "8714", "desc": "Parts & accessories of bicycles/tricycles", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "⚙️"},
+      {"code": "9403", "desc": "Bamboo/cane/rattan furniture", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🪑"},
+      {"code": "9405", "desc": "Hurricane lanterns, kerosene lamps, petromax, chimneys", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🏮"},
+      {"code": "9615", "desc": "Combs, hair accessories (pins, curlers, grips)", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "💇"},
+      {"code": "9619 00 30, 9619 00 40, 9619 00 90", "desc": "Baby napkins, liners, clinical diapers", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🧷"}
+    ],
+    "18% → 5%": [
+      {"code": "3304", "desc": "Talcum powder, face powder", "from": "18%", "to": "5%", "impact": "Cheaper", "icon": "💄"},
+      {"code": "3305", "desc": "Hair oil, shampoo", "from": "18%", "to": "5%", "impact": "Cheaper", "icon": "🧴"},
+      {"code": "3306", "desc": "Dental floss, toothpaste", "from": "18%", "to": "5%", "impact": "Cheaper", "icon": "🪥"},
+      {"code": "3307", "desc": "Shaving cream, aftershave, lotions", "from": "18%", "to": "5%", "impact": "Cheaper", "icon": "🪒"},
+      {"code": "3401", "desc": "Soap (household use, not industrial)", "from": "18%", "to": "5%", "impact": "Cheaper", "icon": "🧼"},
+      {"code": "96032100", "desc": "Toothbrushes incl. dental plate brushes", "from": "18%", "to": "5%", "impact": "Cheaper", "icon": "🪥"}
+    ]
+  },
+  "PAPER": {
+    "12% → Nil": [
+      {"code": "4802", "desc": "Uncoated paper & paperboard used for textbooks and notebooks", "from": "12%", "to": "Nil", "impact": "Cheaper", "icon": "📚"}
+    ],
+    "12% → 5%": [
+      {"code": "4701", "desc": "Mechanical wood pulp", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🪵"},
+      {"code": "4703", "desc": "Chemical wood pulp, soda/sulphate (other than dissolving grades)", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🧪"},
+      {"code": "4704", "desc": "Chemical wood pulp, sulphite (other than dissolving grades)", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🧪"},
+      {"code": "4705", "desc": "Wood pulp from combined mechanical & chemical processes", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🧪"},
+      {"code": "4706", "desc": "Pulp of fibres from recovered waste/scrap paper, paperboard, or other fibrous materials", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "♻️"},
+      {"code": "4817 30", "desc": "Boxes, pouches, wallets, compendiums of paper/paperboard with paper stationery", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "📦"},
+      {"code": "4819 10, 4819 20", "desc": "Corrugated & non-corrugated cartons, boxes, cases of paper/paperboard", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "📦"},
+      {"code": "4823", "desc": "Paper pulp moulded trays", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🧳"},
+      {"code": "48", "desc": "Paper splints for matches, asphaltic roofing sheets", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🏗️"}
+    ],
+    "12% → 18%": [
+      {"code": "4702", "desc": "Chemical wood pulp, dissolving grades", "from": "12%", "to": "18%", "impact": "Costlier", "icon": "🧪"},
+      {"code": "4802", "desc": "Uncoated paper & paperboard (writing, printing, graphic uses, handmade, non-perforated punch cards & tapes) [other than textbooks/notebooks]", "from": "12%", "to": "18%", "impact": "Costlier", "icon": "📄"},
+      {"code": "4804", "desc": "Uncoated kraft paper & paperboard (rolls or sheets)", "from": "12%", "to": "18%", "impact": "Costlier", "icon": "📄"},
+      {"code": "4805", "desc": "Other uncoated paper & paperboard (rolls/sheets)", "from": "12%", "to": "18%", "impact": "Costlier", "icon": "📄"},
+      {"code": "4806 20 00", "desc": "Greaseproof papers", "from": "12%", "to": "18%", "impact": "Costlier", "icon": "🧻"},
+      {"code": "4806 40 10", "desc": "Glassine papers", "from": "12%", "to": "18%", "impact": "Costlier", "icon": "🧻"},
+      {"code": "4807", "desc": "Composite paper/paperboard (adhesive-laminated, not surface coated)", "from": "12%", "to": "18%", "impact": "Costlier", "icon": "📄"},
+      {"code": "4808", "desc": "Corrugated/creped/crinkled/embossed/perforated paper & paperboard (rolls/sheets)", "from": "12%", "to": "18%", "impact": "Costlier", "icon": "📄"},
+      {"code": "4810", "desc": "Coated paper & paperboard (kaolin/inorganic substances, with/without binder)", "from": "12%", "to": "18%", "impact": "Costlier", "icon": "📄"}
+    ]
+  },
+  "FOOTWEAR": {
+    "12% → 5%": [
+      {"code": "64", "desc": "Footwear of sale value not exceeding Rs.2500 per pair", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "👟"}
+    ],
+    "18% → 18%": [
+      {"code": "64", "desc": "Footwear of sale value exceeding Rs.2500 per pair", "from": "18%", "to": "18%", "impact": "Unchanged", "icon": "👠"}
+    ]
+  },
+  "LEATHER SECTOR": {
+    "12% → 5%": [
+      {"code": "4107", "desc": "Leather (bovine or equine animals, without hair, split or unsplit)", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🐄"},
+      {"code": "4112", "desc": "Leather (sheep or lamb, without wool, split or unsplit)", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🐑"},
+      {"code": "4113", "desc": "Leather (other animals, without wool/hair, split or unsplit)", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🦌"},
+      {"code": "4114", "desc": "Chamois leather, patent laminated leather, metallised leather", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "✨"},
+      {"code": "4115", "desc": "Composition leather (leather/fibre-based in sheets, slabs, strips)", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "📄"},
+      {"code": "6701", "desc": "Skins, feathers, down, and related articles of birds", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🪶"}
+    ]
+  },
+  "OTHER MACHINERY": {
+    "12% → 5%": [
+      {"code": "8401", "desc": "Fuel elements (cartridges), non-irradiated, for nuclear reactors", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "⚛️"}
+    ],
+    "28% → 18%": [
+      {"code": "8407", "desc": "Spark-ignition reciprocating or rotary internal combustion piston engine", "from": "28%", "to": "18%", "impact": "Cheaper", "icon": "🔧"},
+      {"code": "8408", "desc": "Compression-ignition internal combustion piston engines (diesel engines)", "from": "28%", "to": "18%", "impact": "Cheaper", "icon": "🛠️"},
+      {"code": "8409", "desc": "Parts suitable for use with the engines of heading 8407 or 8408", "from": "28%", "to": "18%", "impact": "Cheaper", "icon": "⚙️"},
+      {"code": "8413", "desc": "Pumps for dispensing fuel or lubricants (used in filling stations/garages)", "from": "28%", "to": "18%", "impact": "Cheaper", "icon": "⛽"},
+      {"code": "8507", "desc": "Electric accumulators (excluding Lithium-ion batteries)", "from": "28%", "to": "18%", "impact": "Cheaper", "icon": "🔋"},
+      {"code": "8511", "desc": "Electrical ignition or starting equipment for internal combustion engines", "from": "28%", "to": "18%", "impact": "Cheaper", "icon": "🔌"}
+    ]
+  },
+  "OTHER PROPOSALS": {
+    "28%/18% → 5%": [
+      {"code": "8806", "desc": "Unmanned aircrafts with camera", "from": "28%/18%", "to": "5%", "impact": "Cheaper", "icon": "🚁"}
+    ],
+    "18% → Nil": [
+      {"code": "49", "desc": "Technical documentation in respect of goods exempted under notification No. 19/2019-Customs", "from": "18%", "to": "Nil", "impact": "Cheaper", "icon": "📋"},
+      {"code": "71", "desc": "Natural Cut and Polished Diamonds up to 25 cents (1/4 carats) imported under the Diamond Imprest Authorization Scheme", "from": "18%", "to": "Nil", "impact": "Cheaper", "icon": "💎"},
+      {"code": "Any Chapter", "desc": "Works of art and antiques", "from": "18%", "to": "Nil", "impact": "Cheaper", "icon": "🎨"},
+      {"code": "88, 8536", "desc": "Flight Motion Simulator and its parts", "from": "18%", "to": "Nil", "impact": "Cheaper", "icon": "✈️"},
+      {"code": "88, 8536", "desc": "Target Motion Simulator and its parts", "from": "18%", "to": "Nil", "impact": "Cheaper", "icon": "🎯"},
+      {"code": "Any Chapter", "desc": "Parts, sub-assemblies of HACFS", "from": "18%", "to": "Nil", "impact": "Cheaper", "icon": "🔧"},
+      {"code": "84, 85", "desc": "Low noise amplifier (Hermetically sealed), vent guide assembly for MRSAM system", "from": "18%", "to": "Nil", "impact": "Cheaper", "icon": "📡"},
+      {"code": "84, 85, 87, 90, 93", "desc": "Parts and sub-assemblies of Integrated Air Defense Weapon Systems (IADWS)", "from": "18%", "to": "Nil", "impact": "Cheaper", "icon": "🛡️"},
+      {"code": "88", "desc": "Military transport aircraft (C-130, C-295MW)", "from": "18%", "to": "Nil", "impact": "Cheaper", "icon": "🛩️"},
+      {"code": "89", "desc": "Deep Submergence Rescue Vessel", "from": "18%", "to": "Nil", "impact": "Cheaper", "icon": "🚢"},
+      {"code": "89", "desc": "Unmanned Underwater vessels/platforms", "from": "18%", "to": "Nil", "impact": "Cheaper", "icon": "🌊"},
+      {"code": "8807", "desc": "Ejection Seats for fighter aircrafts", "from": "18%", "to": "Nil", "impact": "Cheaper", "icon": "💺"},
+      {"code": "8506", "desc": "High performance batteries for drones and specialized equipment", "from": "18%", "to": "Nil", "impact": "Cheaper", "icon": "🔋"},
+      {"code": "8525", "desc": "Communication devices including software-defined radios with components and accessories", "from": "18%", "to": "Nil", "impact": "Cheaper", "icon": "📻"},
+      {"code": "9019, 9020", "desc": "Air diving, rebreather sets, diving systems, components and accessories", "from": "18%", "to": "Nil", "impact": "Cheaper", "icon": "🤿"},
+      {"code": "89", "desc": "Sonobuoys for naval air assets", "from": "18%", "to": "Nil", "impact": "Cheaper", "icon": "📢"},
+      {"code": "93", "desc": "Ship launched missiles", "from": "18%", "to": "Nil", "impact": "Cheaper", "icon": "🚀"},
+      {"code": "93", "desc": "Rockets with caliber more than 100mm", "from": "18%", "to": "Nil", "impact": "Cheaper", "icon": "🚀"},
+      {"code": "88", "desc": "RPA (Remote Piloted Aircraft) for military use", "from": "18%", "to": "Nil", "impact": "Cheaper", "icon": "🛸"},
+      {"code": "Any Chapter", "desc": "Parts, sub-assemblies, spares, accessories, tools, testing equipment, literature for goods like artillery weapons, rifles, aircraft, etc. (except for specific items)", "from": "18%", "to": "Nil", "impact": "Cheaper", "icon": "🔧"}
+    ]
+  },
+  "SPORTS GOODS & TOYS": {
+    "12% → 5%": [
+      {"code": "4203", "desc": "Gloves specially designed for use in sports", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🧤"},
+      {"code": "9503", "desc": "Toys (tricycles, scooters, pedal cars, etc.) including parts & accessories (excluding electronic toys)", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🧸"},
+      {"code": "9504", "desc": "Playing cards, chess boards, carrom boards, ludo, and other board games (excluding video game consoles/machines)", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "♟️"},
+      {"code": "9506", "desc": "Sports goods (excluding articles/equipment for general physical exercise)", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "⚽"},
+      {"code": "9507", "desc": "Fishing rods, line fishing tackle, landing nets, butterfly nets, decoy birds & hunting requisites (excluding music-related or collectible items)", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🎣"}
+    ],
+    "28% → 18%": [
+      {"code": "9804", "desc": "All dutiable articles intended for personal use (imports)", "from": "28%", "to": "18%", "impact": "Cheaper", "icon": "🎒"}
+    ]
+  },
+  "WOOD SECTOR": {
+    "12% → 5%": [
+      {"code": "44", "desc": "Cement Bonded Particle Board, Jute Particle Board, Rice Husk Board, Glass-fibre Reinforced Gypsum Board (GRG), Sisal-fibre Boards, Bagasse Board, Cotton Stalk Particle Board, Agricultural crop residue boards", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🌾"},
+      {"code": "4404", "desc": "Hoopwood; split poles, piles, pickets and stakes of wood (roughly trimmed, but not turned, bent, or worked)", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🪵"},
+      {"code": "4405", "desc": "Wood wool, wood flour", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🌾"},
+      {"code": "4406", "desc": "Railway or tramway sleepers (cross-ties) of wood", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🚂"},
+      {"code": "4408", "desc": "Sheets for veneering (laminated wood for plywood or similar wood)", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🪚"},
+      {"code": "4409", "desc": "Bamboo flooring", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🎋"},
+      {"code": "4415", "desc": "Packing cases, boxes, crates, drums, pallets of wood", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "📦"},
+      {"code": "4416", "desc": "Casks, barrels, vats, tubs, coopers' products and parts of wood", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🛢️"},
+      {"code": "4417", "desc": "Tools, tool bodies, broom or brush handles, boot or shoe lasts, and trees of wood", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🔨"},
+      {"code": "4418", "desc": "Bamboo wood building joinery", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🏗️"},
+      {"code": "4420", "desc": "Wood marquetry, inlaid wood; caskets and cases for jewellery or cutlery, wooden articles of furniture", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "💍"},
+      {"code": "4421", "desc": "Other wooden articles (clothes hangers, spools, bobbins, match splints, pencil slats, tool parts, floating structures parts, etc.)", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🪄"},
+      {"code": "4502 00 00", "desc": "Natural cork (debacked, roughly squared, or in rectangular blocks, plates, sheets, or strips)", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🍾"},
+      {"code": "4503", "desc": "Articles of natural cork (e.g., corks and stoppers, shuttlecock cork bottom)", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🍷"},
+      {"code": "4504", "desc": "Agglomerated cork (with or without binding substance) and articles of agglomerated cork", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🔗"}
+    ]
+  },
+  "CONSTRUCTION SECTOR": {
+    "12% → 5%": [
+      {"code": "68", "desc": "Sand lime bricks or Stone inlay work", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🧱"}
+    ],
+    "28% → 18%": [
+      {"code": "2523", "desc": "Portland cement, aluminous cement, slag cement, super sulphate cement, etc.", "from": "28%", "to": "18%", "impact": "Cheaper", "icon": "🏗️"}
+    ]
+  },
+  "CONSUMER ELECTRONICS": {
+    "28% → 18%": [
+      {"code": "8415", "desc": "Air-conditioning machines, with motor-driven fan & temperature/humidity control (even where humidity cannot be separately regulated)", "from": "28%", "to": "18%", "impact": "Cheaper", "icon": "❄️"},
+      {"code": "8422", "desc": "Dishwashing machines, household [8422 11 00] and others [8422 19 00]", "from": "28%", "to": "18%", "impact": "Cheaper", "icon": "🍽️"},
+      {"code": "8528", "desc": "Television sets (including LCD/LED), monitors, projectors (not incorporating TV reception apparatus), TV reception equipment, set-top boxes", "from": "28%", "to": "18%", "impact": "Cheaper", "icon": "📺"}
+    ]
+  },
+  "DEFENCE": {
+    "12% → 5%": [
+      {"code": "8525 60", "desc": "Two-way radio (Walkie talkie) used by defence, police, and paramilitary forces etc", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "📻"},
+      {"code": "8710", "desc": "Tanks and other armoured fighting vehicles, motorised, whether or not fitted with weapons, and parts of such vehicles", "from": "12%", "to": "5%", "impact": "Cheaper", "icon": "🚗"}
+    ]
+  }
+};
+
+// Complete data from services HTML
+const servicesData = {
+  "INSURANCE SERVICES": {
+    "18% → Nil": [
+      {"code": "Entry 1", "desc": "All individual health insurance, along with reinsurance thereof", "from": "18% with ITC", "to": "Nil", "impact": "Cheaper", "icon": "🏥"},
+      {"code": "Entry 2", "desc": "All individual life insurance, along with reinsurance thereof", "from": "18% with ITC", "to": "Nil", "impact": "Cheaper", "icon": "🛡️"}
+    ]
+  },
+  "LOCAL DELIVERY SERVICES": {
+    "18% → 18%": [
+      {"code": "Entry 1", "desc": "Local delivery services", "from": "18% with ITC", "to": "18% with ITC", "impact": "Unchanged", "icon": "📦"},
+      {"code": "Entry 2", "desc": "Supply of local delivery services through Electronic Commerce Operator (ECO) under section 9(5) of the CGST Act", "from": "Not notified", "to": "18% with ITC", "impact": "Costlier", "icon": "🛒"}
+    ]
+  },
+  "OTHER SERVICES": {
+    "12% → 5%": [
+      {"code": "Entry 1", "desc": "Supply of Service of third-party insurance of goods carriage", "from": "12% with ITC", "to": "5% with ITC", "impact": "Cheaper", "icon": "🚛"},
+      {"code": "Entry 2", "desc": "Services by way of admission to exhibition of cinematograph films where price of admission ticket is one hundred rupees or less", "from": "12% with ITC", "to": "5% with ITC", "impact": "Cheaper", "icon": "🎬"},
+      {"code": "Entry 3", "desc": "Services by way of treatment of effluents by a Common Effluent Treatment Plant; AND Services by way of treatment or disposal of biomedical waste", "from": "12% with ITC", "to": "5% with ITC", "impact": "Cheaper", "icon": "🏭"},
+      {"code": "Entry 4", "desc": "Supply of hotel accommodation having value of supply of a unit of accommodation less than or equal to seven thousand five hundred rupees per unit per day or equivalent", "from": "12% with ITC", "to": "5% without ITC", "impact": "Cheaper", "icon": "🏨"}
+    ],
+    "18% → 5%": [
+      {"code": "Entry 6", "desc": "Beauty and physical well-being services", "from": "18% with ITC", "to": "5% without ITC", "impact": "Cheaper", "icon": "💄"}
+    ],
+    "12% → 18%": [
+      {"code": "Entry 5", "desc": "Other professional, technical, and business services relating to exploration, mining, or drilling of petroleum crude or natural gas or both; AND Support services to exploration, mining or drilling", "from": "12% with ITC", "to": "18% with ITC", "impact": "Costlier", "icon": "⛽"}
+    ]
+  },
+  "TRANSPORTATION SERVICES": {
+    "12% → 18%": [
+      {"code": "Entry 1", "desc": "Supply of Air transport of passengers in other than economy class", "from": "12% with ITC", "to": "18% with ITC", "impact": "Costlier", "icon": "✈️"},
+      {"code": "Entry 3", "desc": "Supply of transport of goods in containers by rail by any person other than Indian Railways", "from": "12% with ITC", "to": "5% without ITC or 18% with ITC", "impact": "Costlier", "icon": "🚂"},
+      {"code": "Entry 7", "desc": "Supply of Renting of goods carriage where fuel cost is included in consideration", "from": "12% with ITC", "to": "18% with ITC", "impact": "Costlier", "icon": "🚚"},
+      {"code": "Entry 8", "desc": "Supply of Multimodal transport of goods within India", "from": "12% with ITC", "to": "5% without ITC or 18% with ITC", "impact": "Costlier", "icon": "🚛"}
+    ],
+    "5% → 12%": [
+      {"code": "Entry 2", "desc": "Supply of Passenger transport by any motor vehicle where fuel cost is included", "from": "5% with ITC", "to": "12% with ITC", "impact": "Costlier", "icon": "🚌"},
+      {"code": "Entry 5", "desc": "Supply of Transport of goods by GTA", "from": "5% without ITC", "to": "12% with ITC", "impact": "Costlier", "icon": "🚛"},
+      {"code": "Entry 6", "desc": "Supply of Renting of any motor vehicle designed to carry passengers where the cost of fuel is included in consideration", "from": "5% with ITC", "to": "12% with ITC", "impact": "Costlier", "icon": "🚙"}
+    ],
+    "5% → 5%": [
+      {"code": "Entry 4", "desc": "Supply of transportation of natural gas, petroleum crude, motor spirit, high speed diesel, or ATF through pipeline", "from": "5% without ITC", "to": "5% without ITC", "impact": "Unchanged", "icon": "⛽"}
+    ]
+  },
+  "JOB WORK SERVICES": {
+    "12% → 5%": [
+      {"code": "Entry 1", "desc": "Supply of job work in relation to manufacture of umbrella", "from": "12% with ITC", "to": "5% with ITC", "impact": "Cheaper", "icon": "☂️"},
+      {"code": "Entry 2", "desc": "Supply of job work or any treatment or process in relation to printing of all goods falling under Chapter 48 or 49, which attract GST @12%", "from": "12% with ITC", "to": "5% with ITC", "impact": "Cheaper", "icon": "🖨️"},
+      {"code": "Entry 3", "desc": "Supply of job work in relation to manufacture of bricks", "from": "12% with ITC", "to": "5% with ITC", "impact": "Cheaper", "icon": "🧱"},
+      {"code": "Entry 4", "desc": "Supply of job-work in relation to manufacture of goods falling under Chapter 30 (pharmaceutical products)", "from": "12% with ITC", "to": "5% with ITC", "impact": "Cheaper", "icon": "💊"},
+      {"code": "Entry 5", "desc": "Supply of job-work in relation to manufacture of tanned or crust hides and skins falling under Chapter 41", "from": "12% with ITC", "to": "5% with ITC", "impact": "Cheaper", "icon": "🦌"}
+    ],
+    "12% → 18%": [
+      {"code": "Entry 6", "desc": "Supply of job-work not elsewhere covered (residual entry)", "from": "12% with ITC", "to": "18% with ITC", "impact": "Costlier", "icon": "🏭"}
+    ]
+  },
+  "CONSTRUCTION SERVICES": {
+    "12% → 18%": [
+      {"code": "Entry 1", "desc": "Composite supply of works contract and associated services, in respect of offshore works contract relating to oil and gas exploration and production in offshore area", "from": "12% with ITC", "to": "18% with ITC", "impact": "Costlier", "icon": "🛢️"},
+      {"code": "Entry 2", "desc": "Composite supply of works contract involving predominantly earth work (that is, constituting more than 75% of the value of the works contract) provided to Government", "from": "12% with ITC", "to": "18% with ITC", "impact": "Costlier", "icon": "🏗️"}
+    ]
+  },
+  "ENTERTAINMENT & GAMING SERVICES": {
+    "28% → 40%": [
+      {"code": "Entry 1", "desc": "Admission to casinos, race clubs, any place having casinos or race clubs, or sporting events like the IPL", "from": "28% with ITC", "to": "40% with ITC", "impact": "Costlier", "icon": "🎰"},
+      {"code": "Entry 2", "desc": "Services by a race club for licensing of bookmakers in such club", "from": "28% with ITC", "to": "40% with ITC", "impact": "Costlier", "icon": "🏇"},
+      {"code": "Entry 4", "desc": "Specified Actionable Claims (betting, casinos, gambling, horse racing, lottery, online money gaming)", "from": "28% with ITC", "to": "40% with ITC", "impact": "Costlier", "icon": "🎲"}
+    ],
+    "40% → 40%": [
+      {"code": "Entry 3", "desc": "Leasing or rental services, without operator, of goods which will attract 28% GST", "from": "40% with ITC", "to": "40% with ITC", "impact": "Unchanged", "icon": "🏎️"}
+    ]
+  }
+};
+
+let currentSection = '';
+
+function showSection(section) {
+    currentSection = section;
+    
+    // Update button styles
+    const goodsBtn = document.getElementById('goodsBtn');
+    const servicesBtn = document.getElementById('servicesBtn');
+    const goodsFilter = document.getElementById('goodsFilter');
+    const servicesFilter = document.getElementById('servicesFilter');
+    const container = document.getElementById('sectorsContainer');
+    
+    if (section === 'goods') {
+        goodsBtn.classList.add('active');
+        servicesBtn.classList.remove('active');
+        goodsFilter.classList.add('active');
+        servicesFilter.classList.remove('active');
+        loadGoodsSectors();
+    } else {
+        servicesBtn.classList.add('active');
+        goodsBtn.classList.remove('active');
+        servicesFilter.classList.add('active');
+        goodsFilter.classList.remove('active');
+        loadServicesSectors();
+    }
+}
+
+function loadGoodsSectors() {
+    const container = document.getElementById('sectorsContainer');
+    container.innerHTML = '';
+    
+    Object.keys(goodsData).forEach(sectorName => {
+        const sectorCard = createGoodsSectorCard(sectorName, goodsData[sectorName]);
+        container.appendChild(sectorCard);
+    });
+    
+    // Show all sectors initially
+    document.querySelectorAll('.sector-card').forEach(card => {
+        card.classList.add('active');
+    });
+}
+
+function loadServicesSectors() {
+    const container = document.getElementById('sectorsContainer');
+    container.innerHTML = '';
+    
+    Object.keys(servicesData).forEach(sectorName => {
+        const sectorCard = createServicesSectorCard(sectorName, servicesData[sectorName]);
+        container.appendChild(sectorCard);
+    });
+    
+    // Show all sectors initially
+    document.querySelectorAll('.sector-card').forEach(card => {
+        card.classList.add('active');
+    });
+}
+
+function createGoodsSectorCard(sectorName, sectorData) {
+    const card = document.createElement('div');
+    card.className = 'sector-card';
+    card.id = 'goods-' + sectorName.replace(/\s+/g, '');
+    
+    let total = 0, cheaper = 0, costlier = 0, unchanged = 0;
+    
+    for (const rateGroup in sectorData) {
+        sectorData[rateGroup].forEach(item => {
+            total++;
+            if (item.impact === 'Cheaper') cheaper++;
+            else if (item.impact === 'Costlier') costlier++;
+            else unchanged++;
+        });
+    }
+    
+    const icon = getGoodsSectorIcon(sectorName);
+    
+    card.innerHTML = `
+        <div class="sector-header" onclick="toggleSector('goods-${sectorName.replace(/\s+/g, '')}')">
+            <div class="sector-title">
+                <span class="sector-icon">${icon}</span>
+                <span>${sectorName}</span>
+            </div>
+            <span class="expand-icon">▼</span>
+        </div>
+        <div class="sector-content" id="content-goods-${sectorName.replace(/\s+/g, '')}">
+            <div class="summary-cards">
+                <div class="summary-card" onclick="showGoodsDetails('${sectorName}', 'all')">
+                    <div class="card-title">Total Items</div>
+                    <div class="card-number">${total}</div>
+                </div>
+                <div class="summary-card cheaper" onclick="showGoodsDetails('${sectorName}', 'cheaper')">
+                    <div class="card-title">Cheaper</div>
+                    <div class="card-number">${cheaper}</div>
+                </div>
+                <div class="summary-card costlier" onclick="showGoodsDetails('${sectorName}', 'costlier')">
+                    <div class="card-title">Costlier</div>
+                    <div class="card-number">${costlier}</div>
+                </div>
+                <div class="summary-card unchanged" onclick="showGoodsDetails('${sectorName}', 'unchanged')">
+                    <div class="card-title">Unchanged</div>
+                    <div class="card-number">${unchanged}</div>
+                </div>
+            </div>
+        </div>
+    `;
+    
+    return card;
+}
+
+function createServicesSectorCard(sectorName, sectorData) {
+    const card = document.createElement('div');
+    card.className = 'sector-card';
+    card.id = 'services-' + sectorName.replace(/\s+/g, '');
+    
+    let total = 0, cheaper = 0, costlier = 0, unchanged = 0;
+    
+    for (const rateGroup in sectorData) {
+        sectorData[rateGroup].forEach(service => {
+            total++;
+            if (service.impact === 'Cheaper') cheaper++;
+            else if (service.impact === 'Costlier') costlier++;
+            else unchanged++;
+        });
+    }
+    
+    const icon = getServicesSectorIcon(sectorName);
+    
+    card.innerHTML = `
+        <div class="sector-header" onclick="toggleSector('services-${sectorName.replace(/\s+/g, '')}')">
+            <div class="sector-title">
+                <span class="sector-icon">${icon}</span>
+                <span>${sectorName}</span>
+            </div>
+            <span class="expand-icon">▼</span>
+        </div>
+        <div class="sector-content" id="content-services-${sectorName.replace(/\s+/g, '')}">
+            <div class="summary-cards">
+                <div class="summary-card" onclick="showServiceDetails('${sectorName}', 'all')">
+                    <div class="card-title">Total Services</div>
+                    <div class="card-number">${total}</div>
+                </div>
+                <div class="summary-card cheaper" onclick="showServiceDetails('${sectorName}', 'cheaper')">
+                    <div class="card-title">Cheaper</div>
+                    <div class="card-number">${cheaper}</div>
+                </div>
+                <div class="summary-card costlier" onclick="showServiceDetails('${sectorName}', 'costlier')">
+                    <div class="card-title">Costlier</div>
+                    <div class="card-number">${costlier}</div>
+                </div>
+                <div class="summary-card unchanged" onclick="showServiceDetails('${sectorName}', 'unchanged')">
+                    <div class="card-title">Unchanged</div>
+                    <div class="card-number">${unchanged}</div>
+                </div>
+            </div>
+        </div>
+    `;
+    
+    return card;
+}
+
+function getGoodsSectorIcon(sectorName) {
+    const icons = {
+        "TRANSPORTATION SECTOR": "🚗",
+        "TEXTILE SECTOR": "🧵",
+        "FERTILIZER SECTOR": "🌱",
+        "HANDICRAFTS SECTOR": "🎨",
+        "HEALTH SECTOR": "🏥",
+        "MISCELLANEOUS ITEMS": "📦",
+        "TOBACCO": "🚬",
+        "FOOD SECTOR": "🍎",
+        "AGRICULTURE": "🚜",
+        "COAL": "⛏️",
+        "RENEWABLE ENERGY": "♻️",
+        "EDUCATION": "📚",
+        "COMMON MAN ITEMS": "🛒",
+        "PAPER": "📄",
+        "FOOTWEAR": "👟",
+        "LEATHER SECTOR": "🦌",
+        "OTHER MACHINERY": "⚙️",
+        "OTHER PROPOSALS": "💎",
+        "SPORTS GOODS & TOYS": "⚽",
+        "WOOD SECTOR": "🌳",
+        "CONSTRUCTION SECTOR": "🏗️",
+        "CONSUMER ELECTRONICS": "📱",
+        "DEFENCE": "🛡️"
+    };
+    return icons[sectorName] || "📦";
+}
+
+function getServicesSectorIcon(sectorName) {
+    const icons = {
+        "INSURANCE SERVICES": "🛡️",
+        "LOCAL DELIVERY SERVICES": "📦",
+        "OTHER SERVICES": "🔧",
+        "TRANSPORTATION SERVICES": "🚛",
+        "JOB WORK SERVICES": "🏭",
+        "CONSTRUCTION SERVICES": "🏗️",
+        "ENTERTAINMENT & GAMING SERVICES": "🎰"
+    };
+    return icons[sectorName] || "🛠️";
+}
+
+function toggleSector(sectorId) {
+    const content = document.getElementById(`content-${sectorId}`);
+    const expandIcon = content.previousElementSibling.querySelector('.expand-icon');
+    
+    if (content.classList.contains('expanded')) {
+        content.classList.remove('expanded');
+        expandIcon.textContent = '▼';
+        expandIcon.style.transform = 'rotate(0deg)';
+    } else {
+        content.classList.add('expanded');
+        expandIcon.textContent = '▲';
+        expandIcon.style.transform = 'rotate(180deg)';
+    }
+}
+
+function showGoodsDetails(sectorName, filterType) {
+    const sectorData = goodsData[sectorName];
+    const modal = document.getElementById('detailModal');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalBody = document.getElementById('modalBody');
+    
+    modalTitle.textContent = `${sectorName} - ${filterType === 'all' ? 'All Items' : filterType.charAt(0).toUpperCase() + filterType.slice(1) + ' Items'}`;
+    
+    let content = '';
+    
+    for (const rateGroup in sectorData) {
+        const items = sectorData[rateGroup].filter(item => {
+            return filterType === 'all' || 
+                   (filterType === 'cheaper' && item.impact === 'Cheaper') ||
+                   (filterType === 'costlier' && item.impact === 'Costlier') ||
+                   (filterType === 'unchanged' && item.impact === 'Unchanged');
+        });
+        
+        if (items.length > 0) {
+            const from = items[0].from;
+            const to = items[0].to;
+            const f = from.toLowerCase() === 'nil' ? 0 : parseInt(from);
+            const t = to.toLowerCase() === 'nil' ? 0 : parseInt(to);
+            let headerClass = t < f ? 'rate-down-header' : t > f ? 'rate-up-header' : 'rate-flat-header';
+            let arrow = t < f ? '⬇️' : t > f ? '⬆️' : '➡️';
+            
+            content += `
+                <div class="rate-group">
+                    <div class="rate-header ${headerClass}">${arrow} ${rateGroup}</div>
+                    <div style="overflow-x: auto;">
+                        <table>
+                            <tr>
+                                <th>HSN Code</th>
+                                <th>Description of Goods</th>
+                                <th>Previous Rate</th>
+                                <th>New Rate</th>
+                                <th>Impact</th>
+                            </tr>`;
+            
+            items.forEach(item => {
+                const f = item.from.toLowerCase() === 'nil' ? 0 : parseInt(item.from);
+                const t = item.to.toLowerCase() === 'nil' ? 0 : parseInt(item.to);
+                let cls = 'rate-flat';
+                if (t < f) cls = 'rate-down';
+                else if (t > f) cls = 'rate-up';
+                
+                content += `
+                    <tr>
+                        <td><span class="code-pill">${item.code}</span></td>
+                        <td class="desc-cell"><span>${item.icon}</span> <span>${item.desc}</span></td>
+                        <td>${item.from}</td>
+                        <td><span class="${cls}">${item.to}</span></td>
+                        <td><span class="impact ${item.impact}">${item.impact}</span></td>
+                    </tr>`;
+            });
+            
+            content += '</table></div></div>';
+        }
+    }
+    
+    modalBody.innerHTML = content;
+    modal.style.display = 'block';
+    
+    // Add swipe hint on mobile for tables
+    if (window.innerWidth <= 768) {
+        setTimeout(() => {
+            const tables = modalBody.querySelectorAll('table');
+            tables.forEach(table => {
+                if (table.scrollWidth > table.clientWidth) {
+                    const hint = document.createElement('div');
+                    hint.style.cssText = 'text-align: center; color: #718096; font-size: 0.8rem; padding: 0.5rem; background: #f0f4f8; margin-top: 0.5rem; border-radius: 4px;';
+                    hint.textContent = '👈 Swipe table horizontally 👉';
+                    table.parentElement.appendChild(hint);
+                    setTimeout(() => hint.remove(), 3000);
+                }
+            });
+        }, 100);
+    }
+}
+
+function showServiceDetails(sectorName, filterType) {
+    const sectorData = servicesData[sectorName];
+    const modal = document.getElementById('detailModal');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalBody = document.getElementById('modalBody');
+    
+    modalTitle.textContent = `${sectorName} - ${filterType === 'all' ? 'All Services' : filterType.charAt(0).toUpperCase() + filterType.slice(1) + ' Services'}`;
+    
+    let services = [];
+    
+    for (const rateGroup in sectorData) {
+        sectorData[rateGroup].forEach(service => {
+            if (filterType === 'all' || 
+                (filterType === 'cheaper' && service.impact === 'Cheaper') ||
+                (filterType === 'costlier' && service.impact === 'Costlier') ||
+                (filterType === 'unchanged' && service.impact === 'Unchanged')) {
+                services.push(service);
+            }
+        });
+    }
+    
+    modalBody.innerHTML = services.map(service => `
+        <div class="service-item">
+            <div class="service-header">
+                <span class="service-icon">${service.icon}</span>
+                <span class="service-code">${service.code}</span>
+            </div>
+            <div class="service-desc">${service.desc}</div>
+            <div class="rate-info">
+                <div class="rate-change">
+                    <span class="rate-from">${service.from}</span>
+                    <span>→</span>
+                    <span class="rate-to">${service.to}</span>
+                </div>
+                <span class="impact-badge impact-${service.impact.toLowerCase()}">${service.impact}</span>
+            </div>
+        </div>
+    `).join('');
+    
+    modal.style.display = 'block';
+}
+
+function closeModal() {
+    document.getElementById('detailModal').style.display = 'none';
+}
+
+// Filter dropdown functionality
+document.getElementById('goodsSectorFilter').addEventListener('change', function(e) {
+    const container = document.getElementById('sectorsContainer');
+    
+    if (e.target.value) {
+        const sectorId = 'goods-' + e.target.value.replace(/\s+/g, '');
+        
+        // Hide all sectors
+        document.querySelectorAll('.sector-card').forEach(card => {
+            card.classList.remove('active');
+        });
+        
+        // Show selected sector
+        const selectedCard = document.getElementById(sectorId);
+        if (selectedCard) {
+            selectedCard.classList.add('active');
+            selectedCard.scrollIntoView({ behavior: 'smooth' });
+            
+            // Expand it if not already expanded
+            setTimeout(() => {
+                const contentId = `content-${sectorId}`;
+                if (!document.getElementById(contentId).classList.contains('expanded')) {
+                    toggleSector(sectorId);
+                }
+            }, 300);
+        }
+    } else {
+        // Show all sectors
+        document.querySelectorAll('.sector-card').forEach(card => {
+            card.classList.add('active');
+        });
+    }
+});
+
+document.getElementById('servicesSectorFilter').addEventListener('change', function(e) {
+    const container = document.getElementById('sectorsContainer');
+    
+    if (e.target.value) {
+        const sectorId = 'services-' + e.target.value.replace(/\s+/g, '');
+        
+        // Hide all sectors
+        document.querySelectorAll('.sector-card').forEach(card => {
+            card.classList.remove('active');
+        });
+        
+        // Show selected sector
+        const selectedCard = document.getElementById(sectorId);
+        if (selectedCard) {
+            selectedCard.classList.add('active');
+            selectedCard.scrollIntoView({ behavior: 'smooth' });
+            
+            // Expand it if not already expanded
+            setTimeout(() => {
+                const contentId = `content-${sectorId}`;
+                if (!document.getElementById(contentId).classList.contains('expanded')) {
+                    toggleSector(sectorId);
+                }
+            }, 300);
+        }
+    } else {
+        // Show all sectors
+        document.querySelectorAll('.sector-card').forEach(card => {
+            card.classList.add('active');
+        });
+    }
+});
+
+// Close modal when clicking outside
+window.onclick = function(event) {
+    const modal = document.getElementById('detailModal');
+    if (event.target === modal) {
+        closeModal();
+    }
+}
+
+// Initialize with goods section
+window.addEventListener('DOMContentLoaded', function() {
+    showSection('goods');
+});
+</script>
+
+</body></html>
